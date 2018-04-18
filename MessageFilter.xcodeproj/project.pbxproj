@@ -8,24 +8,75 @@
 
 /* Begin PBXBuildFile section */
 		AF719A5C2085C275004E4C0C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF719A5B2085C275004E4C0C /* AppDelegate.swift */; };
-		AF719A5E2085C275004E4C0C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF719A5D2085C275004E4C0C /* ViewController.swift */; };
+		AF719A5E2085C275004E4C0C /* FilterWordsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF719A5D2085C275004E4C0C /* FilterWordsViewController.swift */; };
 		AF719A612085C275004E4C0C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AF719A5F2085C275004E4C0C /* Main.storyboard */; };
 		AF719A632085C275004E4C0C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AF719A622085C275004E4C0C /* Assets.xcassets */; };
 		AF719A662085C275004E4C0C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AF719A642085C275004E4C0C /* LaunchScreen.storyboard */; };
+		AF719A742085C327004E4C0C /* MessageFilterExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF719A732085C327004E4C0C /* MessageFilterExtension.swift */; };
+		AF719A782085C327004E4C0C /* MessageFilterExtension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = AF719A712085C327004E4C0C /* MessageFilterExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		AFF3D187208707A000375C68 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFF3D186208707A000375C68 /* Model.swift */; };
+		AFF3D18920870ABE00375C68 /* FilterWordsTableViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFF3D18820870ABE00375C68 /* FilterWordsTableViewDataSource.swift */; };
+		AFF3D18B20870C3900375C68 /* FilterWordsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFF3D18A20870C3900375C68 /* FilterWordsTableViewCell.swift */; };
+		AFF3D18D2087104F00375C68 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFF3D18C2087104F00375C68 /* Constants.swift */; };
+		AFF3D18F2087116900375C68 /* StateController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFF3D18E2087116900375C68 /* StateController.swift */; };
+		AFF3D19120871C0F00375C68 /* AddKeywordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFF3D19020871C0F00375C68 /* AddKeywordViewController.swift */; };
+		AFF3D1972087285900375C68 /* StorageController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFF3D1962087285900375C68 /* StorageController.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		AF719A762085C327004E4C0C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = AF719A502085C275004E4C0C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = AF719A702085C327004E4C0C;
+			remoteInfo = MessageFilterExtension;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		AF719A7C2085C327004E4C0C /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				AF719A782085C327004E4C0C /* MessageFilterExtension.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		AF719A582085C275004E4C0C /* MessageFilter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MessageFilter.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AF719A5B2085C275004E4C0C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		AF719A5D2085C275004E4C0C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		AF719A5D2085C275004E4C0C /* FilterWordsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterWordsViewController.swift; sourceTree = "<group>"; };
 		AF719A602085C275004E4C0C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		AF719A622085C275004E4C0C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AF719A652085C275004E4C0C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		AF719A672085C275004E4C0C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AF719A712085C327004E4C0C /* MessageFilterExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = MessageFilterExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		AF719A732085C327004E4C0C /* MessageFilterExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageFilterExtension.swift; sourceTree = "<group>"; };
+		AF719A752085C327004E4C0C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AF719A7D2085E7D6004E4C0C /* PracticePlayground.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = PracticePlayground.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
+		AFF3D186208707A000375C68 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
+		AFF3D18820870ABE00375C68 /* FilterWordsTableViewDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterWordsTableViewDataSource.swift; sourceTree = "<group>"; };
+		AFF3D18A20870C3900375C68 /* FilterWordsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterWordsTableViewCell.swift; sourceTree = "<group>"; };
+		AFF3D18C2087104F00375C68 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		AFF3D18E2087116900375C68 /* StateController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StateController.swift; sourceTree = "<group>"; };
+		AFF3D19020871C0F00375C68 /* AddKeywordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddKeywordViewController.swift; sourceTree = "<group>"; };
+		AFF3D1962087285900375C68 /* StorageController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		AF719A552085C275004E4C0C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AF719A6E2085C327004E4C0C /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -39,6 +90,7 @@
 			isa = PBXGroup;
 			children = (
 				AF719A5A2085C275004E4C0C /* MessageFilter */,
+				AF719A722085C327004E4C0C /* MessageFilterExtension */,
 				AF719A592085C275004E4C0C /* Products */,
 			);
 			sourceTree = "<group>";
@@ -47,6 +99,7 @@
 			isa = PBXGroup;
 			children = (
 				AF719A582085C275004E4C0C /* MessageFilter.app */,
+				AF719A712085C327004E4C0C /* MessageFilterExtension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -54,14 +107,47 @@
 		AF719A5A2085C275004E4C0C /* MessageFilter */ = {
 			isa = PBXGroup;
 			children = (
+				AFF3D1852087078A00375C68 /* Model */,
+				AFF3D1822087052C00375C68 /* Storage */,
+				AF719A7D2085E7D6004E4C0C /* PracticePlayground.playground */,
 				AF719A5B2085C275004E4C0C /* AppDelegate.swift */,
-				AF719A5D2085C275004E4C0C /* ViewController.swift */,
+				AF719A5D2085C275004E4C0C /* FilterWordsViewController.swift */,
+				AFF3D19020871C0F00375C68 /* AddKeywordViewController.swift */,
+				AFF3D18820870ABE00375C68 /* FilterWordsTableViewDataSource.swift */,
+				AFF3D18A20870C3900375C68 /* FilterWordsTableViewCell.swift */,
 				AF719A5F2085C275004E4C0C /* Main.storyboard */,
 				AF719A622085C275004E4C0C /* Assets.xcassets */,
 				AF719A642085C275004E4C0C /* LaunchScreen.storyboard */,
 				AF719A672085C275004E4C0C /* Info.plist */,
 			);
 			path = MessageFilter;
+			sourceTree = "<group>";
+		};
+		AF719A722085C327004E4C0C /* MessageFilterExtension */ = {
+			isa = PBXGroup;
+			children = (
+				AF719A732085C327004E4C0C /* MessageFilterExtension.swift */,
+				AF719A752085C327004E4C0C /* Info.plist */,
+			);
+			path = MessageFilterExtension;
+			sourceTree = "<group>";
+		};
+		AFF3D1822087052C00375C68 /* Storage */ = {
+			isa = PBXGroup;
+			children = (
+				AFF3D1962087285900375C68 /* StorageController.swift */,
+				AFF3D18C2087104F00375C68 /* Constants.swift */,
+				AFF3D18E2087116900375C68 /* StateController.swift */,
+			);
+			path = Storage;
+			sourceTree = "<group>";
+		};
+		AFF3D1852087078A00375C68 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				AFF3D186208707A000375C68 /* Model.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -74,15 +160,34 @@
 				AF719A542085C275004E4C0C /* Sources */,
 				AF719A552085C275004E4C0C /* Frameworks */,
 				AF719A562085C275004E4C0C /* Resources */,
+				AF719A7C2085C327004E4C0C /* Embed App Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				AF719A772085C327004E4C0C /* PBXTargetDependency */,
 			);
 			name = MessageFilter;
 			productName = MessageFilter;
 			productReference = AF719A582085C275004E4C0C /* MessageFilter.app */;
 			productType = "com.apple.product-type.application";
+		};
+		AF719A702085C327004E4C0C /* MessageFilterExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AF719A792085C327004E4C0C /* Build configuration list for PBXNativeTarget "MessageFilterExtension" */;
+			buildPhases = (
+				AF719A6D2085C327004E4C0C /* Sources */,
+				AF719A6E2085C327004E4C0C /* Frameworks */,
+				AF719A6F2085C327004E4C0C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MessageFilterExtension;
+			productName = MessageFilterExtension;
+			productReference = AF719A712085C327004E4C0C /* MessageFilterExtension.appex */;
+			productType = "com.apple.product-type.app-extension";
 		};
 /* End PBXNativeTarget section */
 
@@ -96,7 +201,11 @@
 				TargetAttributes = {
 					AF719A572085C275004E4C0C = {
 						CreatedOnToolsVersion = 9.0;
-						ProvisioningStyle = Automatic;
+						ProvisioningStyle = Manual;
+					};
+					AF719A702085C327004E4C0C = {
+						CreatedOnToolsVersion = 9.0;
+						ProvisioningStyle = Manual;
 					};
 				};
 			};
@@ -114,6 +223,7 @@
 			projectRoot = "";
 			targets = (
 				AF719A572085C275004E4C0C /* MessageFilter */,
+				AF719A702085C327004E4C0C /* MessageFilterExtension */,
 			);
 		};
 /* End PBXProject section */
@@ -129,6 +239,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		AF719A6F2085C327004E4C0C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -136,12 +253,35 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AF719A5E2085C275004E4C0C /* ViewController.swift in Sources */,
+				AFF3D18B20870C3900375C68 /* FilterWordsTableViewCell.swift in Sources */,
+				AF719A5E2085C275004E4C0C /* FilterWordsViewController.swift in Sources */,
 				AF719A5C2085C275004E4C0C /* AppDelegate.swift in Sources */,
+				AFF3D18D2087104F00375C68 /* Constants.swift in Sources */,
+				AFF3D19120871C0F00375C68 /* AddKeywordViewController.swift in Sources */,
+				AFF3D18F2087116900375C68 /* StateController.swift in Sources */,
+				AFF3D18920870ABE00375C68 /* FilterWordsTableViewDataSource.swift in Sources */,
+				AFF3D187208707A000375C68 /* Model.swift in Sources */,
+				AFF3D1972087285900375C68 /* StorageController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AF719A6D2085C327004E4C0C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AF719A742085C327004E4C0C /* MessageFilterExtension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		AF719A772085C327004E4C0C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = AF719A702085C327004E4C0C /* MessageFilterExtension */;
+			targetProxy = AF719A762085C327004E4C0C /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		AF719A5F2085C275004E4C0C /* Main.storyboard */ = {
@@ -273,12 +413,16 @@
 		AF719A6B2085C275004E4C0C /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = 2BL4KQW6R5;
 				INFOPLIST_FILE = MessageFilter/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.bjitgroup.MessageFilter;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "57bf95a5-0982-4eac-a5e6-e1edd9a5451f";
+				PROVISIONING_PROFILE_SPECIFIER = BJITWILDCARDDEV;
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -287,12 +431,48 @@
 		AF719A6C2085C275004E4C0C /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = MessageFilter/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.bjitgroup.MessageFilter;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		AF719A7A2085C327004E4C0C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = 2BL4KQW6R5;
+				INFOPLIST_FILE = MessageFilterExtension/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.bjitgroup.MessageFilter.MessageFilterExtension;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "57bf95a5-0982-4eac-a5e6-e1edd9a5451f";
+				PROVISIONING_PROFILE_SPECIFIER = BJITWILDCARDDEV;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		AF719A7B2085C327004E4C0C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = "";
+				INFOPLIST_FILE = MessageFilterExtension/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.bjitgroup.MessageFilter.MessageFilterExtension;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -315,6 +495,15 @@
 			buildConfigurations = (
 				AF719A6B2085C275004E4C0C /* Debug */,
 				AF719A6C2085C275004E4C0C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AF719A792085C327004E4C0C /* Build configuration list for PBXNativeTarget "MessageFilterExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AF719A7A2085C327004E4C0C /* Debug */,
+				AF719A7B2085C327004E4C0C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

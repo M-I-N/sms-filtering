@@ -10,19 +10,24 @@ import Foundation
 
 class StateController {
     private(set) var words = [String]()
+    private(set) var numbers = [String]()
     private let storageController: StorageController
     init(storageController: StorageController) {
         self.storageController = storageController
-        guard let filter = storageController.fetchFilter() else {
+
+        if let wordFilter = storageController.fetchWordFilter() {
+            words = wordFilter.words
+        } else {
             words = addDefaultFilter().words
-            return
         }
-        words = filter.words
+        if let numberFilter = storageController.fetchNumberFilter() {
+            numbers = numberFilter.numbers
+        }
     }
 
-    private func addDefaultFilter()-> Filter {
-        let filter = Filter(words: ["offer", "register", "subscribe"])
-        storageController.save(filter: filter)
+    private func addDefaultFilter()-> WordFilter {
+        let filter = WordFilter(words: ["offer", "register", "subscribe"])
+        storageController.save(wordFilter: filter)
         return filter
     }
 
@@ -30,8 +35,18 @@ class StateController {
         if !word.isEmpty {
             words.append(word)
             // create new filter object with this updated words list
-            let filter = Filter(words: words)
-            storageController.save(filter: filter)
+            let filter = WordFilter(words: words)
+            storageController.save(wordFilter: filter)
+        }
+    }
+
+    func add(number: String) {
+        if !number.isEmpty {
+            let trimmedNumber = number.trimmingCharacters(in: .whitespaces)
+            numbers.append(trimmedNumber)
+            // create new filter object with this updated numbers list
+            let filter = NumberFilter(numbers: numbers)
+            storageController.save(numberFilter: filter)
         }
     }
 }

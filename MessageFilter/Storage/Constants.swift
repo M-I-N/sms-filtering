@@ -9,6 +9,7 @@
 import Foundation
 
 struct Constants {
-    static let messageFilterUserDefaultsKey = "MessageFilterUserDefaultsKey"
-    static let userDefaultsSuiteKey = "group.com.bjitgroup.messagefilter"
+    static let wordsFilterUserDefaultsKey = "WordsFilterUserDefaultsKey"
+    static let numbersFilterUserDefaultsKey = "NumbersFilterUserDefaultsKey"
+    static let userDefaultsSuiteKey = "group.com.bjitgroup.TalkMondo"
 }

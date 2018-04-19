@@ -11,30 +11,56 @@ import Foundation
 class StorageController {
     let userDefaults = UserDefaults(suiteName: Constants.userDefaultsSuiteKey)!
 
-    func save(filter: Filter) {
+    func save(wordFilter: WordFilter) {
         let encoder = JSONEncoder()
         do {
-            let encodedFilter = try encoder.encode(filter)
-            userDefaults.set(encodedFilter, forKey: Constants.messageFilterUserDefaultsKey)
+            let encodedFilter = try encoder.encode(wordFilter)
+            userDefaults.set(encodedFilter, forKey: Constants.wordsFilterUserDefaultsKey)
         } catch {
             fatalError(error.localizedDescription)
         }
     }
 
-    func fetchFilter()-> Filter? {
-        if let data = userDefaults.data(forKey: Constants.messageFilterUserDefaultsKey) {
+    func save(numberFilter: NumberFilter) {
+        let encoder = JSONEncoder()
+        do {
+            let encodedFilter = try encoder.encode(numberFilter)
+            userDefaults.set(encodedFilter, forKey: Constants.numbersFilterUserDefaultsKey)
+        } catch {
+            fatalError(error.localizedDescription)
+        }
+    }
+
+    func fetchWordFilter()-> WordFilter? {
+        if let data = userDefaults.data(forKey: Constants.wordsFilterUserDefaultsKey) {
             let decoder = JSONDecoder()
             do {
-                let decodedFilter = try decoder.decode(Filter.self, from: data)
+                let decodedFilter = try decoder.decode(WordFilter.self, from: data)
                 return decodedFilter
             } catch {
                 print(error.localizedDescription)
                 return nil
             }
         } else {
-            print("No initial Filter data exists")
+            print("No initial words for filtering exists")
             return nil
         }
     }
-    
+
+    func fetchNumberFilter()-> NumberFilter? {
+        if let data = userDefaults.data(forKey: Constants.numbersFilterUserDefaultsKey) {
+            let decoder = JSONDecoder()
+            do {
+                let decodedFilter = try decoder.decode(NumberFilter.self, from: data)
+                return decodedFilter
+            } catch {
+                print(error.localizedDescription)
+                return nil
+            }
+        } else {
+            print("No initial numbers for filtering exists")
+            return nil
+        }
+    }
+
 }

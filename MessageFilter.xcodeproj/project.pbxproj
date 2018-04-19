@@ -14,6 +14,9 @@
 		AF719A662085C275004E4C0C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AF719A642085C275004E4C0C /* LaunchScreen.storyboard */; };
 		AF719A742085C327004E4C0C /* MessageFilterExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF719A732085C327004E4C0C /* MessageFilterExtension.swift */; };
 		AF719A782085C327004E4C0C /* MessageFilterExtension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = AF719A712085C327004E4C0C /* MessageFilterExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		AFBCE4E22087500C0033FFDF /* StorageController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFF3D1962087285900375C68 /* StorageController.swift */; };
+		AFBCE4E3208750310033FFDF /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFF3D186208707A000375C68 /* Model.swift */; };
+		AFBCE4E42087536A0033FFDF /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFF3D18C2087104F00375C68 /* Constants.swift */; };
 		AFF3D187208707A000375C68 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFF3D186208707A000375C68 /* Model.swift */; };
 		AFF3D18920870ABE00375C68 /* FilterWordsTableViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFF3D18820870ABE00375C68 /* FilterWordsTableViewDataSource.swift */; };
 		AFF3D18B20870C3900375C68 /* FilterWordsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFF3D18A20870C3900375C68 /* FilterWordsTableViewCell.swift */; };
@@ -59,6 +62,8 @@
 		AF719A732085C327004E4C0C /* MessageFilterExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageFilterExtension.swift; sourceTree = "<group>"; };
 		AF719A752085C327004E4C0C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AF719A7D2085E7D6004E4C0C /* PracticePlayground.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = PracticePlayground.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
+		AFBCE4E02087450B0033FFDF /* MessageFilter.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = MessageFilter.entitlements; sourceTree = "<group>"; };
+		AFBCE4E12087454A0033FFDF /* MessageFilterExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = MessageFilterExtension.entitlements; sourceTree = "<group>"; };
 		AFF3D186208707A000375C68 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 		AFF3D18820870ABE00375C68 /* FilterWordsTableViewDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterWordsTableViewDataSource.swift; sourceTree = "<group>"; };
 		AFF3D18A20870C3900375C68 /* FilterWordsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterWordsTableViewCell.swift; sourceTree = "<group>"; };
@@ -107,6 +112,7 @@
 		AF719A5A2085C275004E4C0C /* MessageFilter */ = {
 			isa = PBXGroup;
 			children = (
+				AFBCE4E02087450B0033FFDF /* MessageFilter.entitlements */,
 				AFF3D1852087078A00375C68 /* Model */,
 				AFF3D1822087052C00375C68 /* Storage */,
 				AF719A7D2085E7D6004E4C0C /* PracticePlayground.playground */,
@@ -126,6 +132,7 @@
 		AF719A722085C327004E4C0C /* MessageFilterExtension */ = {
 			isa = PBXGroup;
 			children = (
+				AFBCE4E12087454A0033FFDF /* MessageFilterExtension.entitlements */,
 				AF719A732085C327004E4C0C /* MessageFilterExtension.swift */,
 				AF719A752085C327004E4C0C /* Info.plist */,
 			);
@@ -202,10 +209,20 @@
 					AF719A572085C275004E4C0C = {
 						CreatedOnToolsVersion = 9.0;
 						ProvisioningStyle = Manual;
+						SystemCapabilities = {
+							com.apple.ApplicationGroups.iOS = {
+								enabled = 1;
+							};
+						};
 					};
 					AF719A702085C327004E4C0C = {
 						CreatedOnToolsVersion = 9.0;
 						ProvisioningStyle = Manual;
+						SystemCapabilities = {
+							com.apple.ApplicationGroups.iOS = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -269,7 +286,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AFBCE4E3208750310033FFDF /* Model.swift in Sources */,
 				AF719A742085C327004E4C0C /* MessageFilterExtension.swift in Sources */,
+				AFBCE4E22087500C0033FFDF /* StorageController.swift in Sources */,
+				AFBCE4E42087536A0033FFDF /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -415,14 +435,15 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = MessageFilter/MessageFilter.entitlements;
 				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = 2BL4KQW6R5;
 				INFOPLIST_FILE = MessageFilter/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.bjitgroup.MessageFilter;
+                PRODUCT_BUNDLE_IDENTIFIER = com.bjitgroup.MessageFilter;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "57bf95a5-0982-4eac-a5e6-e1edd9a5451f";
-				PROVISIONING_PROFILE_SPECIFIER = BJITWILDCARDDEV;
+                PROVISIONING_PROFILE = "57bf95a5-0982-4eac-a5e6-e1edd9a5451f";
+                PROVISIONING_PROFILE_SPECIFIER = BJITWILDCARDDEV;
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -433,11 +454,12 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = MessageFilter/MessageFilter.entitlements;
 				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = MessageFilter/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.bjitgroup.MessageFilter;
+                PRODUCT_BUNDLE_IDENTIFIER = com.bjitgroup.MessageFilter;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.0;
@@ -448,14 +470,15 @@
 		AF719A7A2085C327004E4C0C /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = MessageFilterExtension/MessageFilterExtension.entitlements;
 				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = 2BL4KQW6R5;
 				INFOPLIST_FILE = MessageFilterExtension/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.bjitgroup.MessageFilter.MessageFilterExtension;
+                PRODUCT_BUNDLE_IDENTIFIER = com.bjitgroup.MessageFilter.MessageFilterExtension;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "57bf95a5-0982-4eac-a5e6-e1edd9a5451f";
-				PROVISIONING_PROFILE_SPECIFIER = BJITWILDCARDDEV;
+                PROVISIONING_PROFILE = "57bf95a5-0982-4eac-a5e6-e1edd9a5451f";
+                PROVISIONING_PROFILE_SPECIFIER = BJITWILDCARDDEV;
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -465,11 +488,12 @@
 		AF719A7B2085C327004E4C0C /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = MessageFilterExtension/MessageFilterExtension.entitlements;
 				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = MessageFilterExtension/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.bjitgroup.MessageFilter.MessageFilterExtension;
+                PRODUCT_BUNDLE_IDENTIFIER = com.bjitgroup.MessageFilter.MessageFilterExtension;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SKIP_INSTALL = YES;

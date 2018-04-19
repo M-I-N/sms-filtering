@@ -10,11 +10,22 @@ import IdentityLookup
 
 final class MessageFilterExtension: ILMessageFilterExtension {
 
-    let words = ["offer", "subscribe", "register"]
-    lazy var capitalizedWords = words.map { $0.capitalized }
-    lazy var uppercasedWords = words.map { $0.uppercased() }
+    /*private var words = [String]()
+    private lazy var wordsToFiler: [String] = {
+        if let words = storageController.fetchFilter()?.words {
+            let capitalizedWords = words.map { $0.capitalized }
+            let uppercasedWords = words.map { $0.uppercased() }
+            self.words = words + capitalizedWords + uppercasedWords
+        }
+        return self.words
+    }()*/
 
-    lazy var wordsToFiler = words + capitalizedWords + uppercasedWords
+    private lazy var wordsToFiler: [String] = {
+        return storageController.fetchFilter()?.words ?? [String]()
+    }()
+
+    let storageController = StorageController()
+
 }
 
 extension MessageFilterExtension: ILMessageFilterQueryHandling {
@@ -57,8 +68,9 @@ extension MessageFilterExtension: ILMessageFilterQueryHandling {
         if let messageSender = queryRequest.sender {
             print(messageSender)
         }
-        print(messageBody)
-        return wordsToFiler.contains(where: messageBody.contains) ? .filter : .none
+//        print(messageBody)
+//        print(wordsToFiler)
+        return wordsToFiler.map { $0.lowercased() }.contains(where: messageBody.lowercased().contains) ? .filter : .none
     }
     
     private func action(for networkResponse: ILNetworkResponse) -> ILMessageFilterAction {

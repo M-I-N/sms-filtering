@@ -9,7 +9,6 @@
 import Foundation
 
 struct Constants {
-    static let filterFileName = "filter.json"
     static let messageFilterUserDefaultsKey = "MessageFilterUserDefaultsKey"
     static let userDefaultsSuiteKey = "group.com.bjitgroup.messagefilter"
 }

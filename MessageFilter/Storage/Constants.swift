@@ -12,4 +12,6 @@ struct Constants {
     static let wordsFilterUserDefaultsKey = "WordsFilterUserDefaultsKey"
     static let numbersFilterUserDefaultsKey = "NumbersFilterUserDefaultsKey"
     static let userDefaultsSuiteKey = "group.com.bjitgroup.messagefilter"
+    static let blockedCallsUserDefaultsKey = "BlockedCallsUserDefaultsKey"
+    static let phoneNumbersAddedToBlockList = "PhoneNumbersAddedToBlockList"
 }

@@ -29,8 +29,8 @@ class FilterNumbersViewController: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         switch segue.identifier! {
         case "AddNumberSegue":
-            if let navigationController = segue.destination as? UINavigationController, let addKeywordViewController = navigationController.viewControllers.first as? AddNumberViewController {
-                addKeywordViewController.stateController = stateController
+            if let navigationController = segue.destination as? UINavigationController, let addNumberViewController = navigationController.viewControllers.first as? AddNumberViewController {
+                addNumberViewController.stateController = stateController
             }
         default:
             break

@@ -17,10 +17,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
 
-        let initialController = window?.rootViewController as! UINavigationController
+        /*let initialController = window?.rootViewController as! UINavigationController
         let masterViewController = initialController.viewControllers.first as! MasterViewController
         let stateController = StateController(storageController: StorageController())
-        masterViewController.stateController = stateController
+        masterViewController.stateController = stateController*/
+        let tabBarController = window?.rootViewController as! RootTabBarController
+        let stateController = StateController(storageController: StorageController())
+        tabBarController.stateController = stateController
         return true
     }
 

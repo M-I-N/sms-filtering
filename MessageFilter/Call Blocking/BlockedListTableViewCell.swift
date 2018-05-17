@@ -14,7 +14,7 @@ class BlockedListTableViewCell: UITableViewCell {
         didSet {
             guard let viewModel = viewModel else { return }
             self.textLabel?.text = viewModel.name
-            self.detailTextLabel?.text = viewModel.phoneNumber
+            self.detailTextLabel?.text = viewModel.phoneNumber.internationallyFormattedNumber ?? "Phone Number Malformed"
         }
     }
 

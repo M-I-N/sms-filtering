@@ -13,7 +13,7 @@ class FilterNumbersTableViewCell: UITableViewCell {
     var viewModel: ViewModel? {
         didSet {
             guard let viewModel = viewModel else { return }
-            self.textLabel?.text = viewModel.number
+            self.textLabel?.text = viewModel.number.internationallyFormattedNumber ?? "Phone Number Malformed"
         }
     }
 

@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6BEB78B7DAE96B02F544E80F /* Pods_MessageFilter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 620B482ED181BA8666690399 /* Pods_MessageFilter.framework */; };
+		96C6ECBEA0CE971707F02455 /* Pods_MessageFilterExtension.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C7D026EB09D84CE8BF41CA8 /* Pods_MessageFilterExtension.framework */; };
 		AF23252F20AAB6AB00C56813 /* AddBlockNumberViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF23252E20AAB6AB00C56813 /* AddBlockNumberViewController.swift */; };
 		AF23253020AAEBB500C56813 /* StorageController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFF3D1962087285900375C68 /* StorageController.swift */; };
 		AF47C33520884AA2001E20E0 /* MasterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF47C33420884AA2001E20E0 /* MasterViewController.swift */; };
@@ -26,6 +28,7 @@
 		AF8C65A920ABF53200E083A0 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFF3D186208707A000375C68 /* Model.swift */; };
 		AF8C65AA20ABF54800E083A0 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFF3D18C2087104F00375C68 /* Constants.swift */; };
 		AF8C65AD20AC2BC700E083A0 /* PhoneSettingsExplorer.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF8C65AC20AC2BC700E083A0 /* PhoneSettingsExplorer.swift */; };
+		AFA9CDBF20AD680900E25402 /* PhoneNumberParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFA9CDBE20AD680900E25402 /* PhoneNumberParser.swift */; };
 		AFBCE4E22087500C0033FFDF /* StorageController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFF3D1962087285900375C68 /* StorageController.swift */; };
 		AFBCE4E3208750310033FFDF /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFF3D186208707A000375C68 /* Model.swift */; };
 		AFBCE4E42087536A0033FFDF /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFF3D18C2087104F00375C68 /* Constants.swift */; };
@@ -40,6 +43,7 @@
 		AFF3D18F2087116900375C68 /* StateController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFF3D18E2087116900375C68 /* StateController.swift */; };
 		AFF3D19120871C0F00375C68 /* AddKeywordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFF3D19020871C0F00375C68 /* AddKeywordViewController.swift */; };
 		AFF3D1972087285900375C68 /* StorageController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFF3D1962087285900375C68 /* StorageController.swift */; };
+		FABD92F286B59134316F5DAE /* Pods_CallDirectoryExtension.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C17DED371CE83FDA3347E2A8 /* Pods_CallDirectoryExtension.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -75,6 +79,13 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		0D7B3E45200105DA402F9D93 /* Pods-MessageFilterExtension.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MessageFilterExtension.release.xcconfig"; path = "Pods/Target Support Files/Pods-MessageFilterExtension/Pods-MessageFilterExtension.release.xcconfig"; sourceTree = "<group>"; };
+		205055D04A4C77C46694D2ED /* Pods-MessageFilter.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MessageFilter.release.xcconfig"; path = "Pods/Target Support Files/Pods-MessageFilter/Pods-MessageFilter.release.xcconfig"; sourceTree = "<group>"; };
+		2C7D026EB09D84CE8BF41CA8 /* Pods_MessageFilterExtension.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MessageFilterExtension.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4821D3E9AAEACF4E1E259A0B /* Pods-CallDirectoryExtension.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CallDirectoryExtension.release.xcconfig"; path = "Pods/Target Support Files/Pods-CallDirectoryExtension/Pods-CallDirectoryExtension.release.xcconfig"; sourceTree = "<group>"; };
+		52270FBE129AAAEF7ABAA61A /* Pods-MessageFilter.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MessageFilter.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MessageFilter/Pods-MessageFilter.debug.xcconfig"; sourceTree = "<group>"; };
+		620B482ED181BA8666690399 /* Pods_MessageFilter.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MessageFilter.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8615CDEC5C4A249FDE592E74 /* Pods-MessageFilterExtension.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MessageFilterExtension.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MessageFilterExtension/Pods-MessageFilterExtension.debug.xcconfig"; sourceTree = "<group>"; };
 		AF23252E20AAB6AB00C56813 /* AddBlockNumberViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddBlockNumberViewController.swift; sourceTree = "<group>"; };
 		AF47C33420884AA2001E20E0 /* MasterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MasterViewController.swift; sourceTree = "<group>"; };
 		AF6D975620AA981700DFC8D5 /* RootTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootTabBarController.swift; sourceTree = "<group>"; };
@@ -91,12 +102,13 @@
 		AF719A712085C327004E4C0C /* MessageFilterExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = MessageFilterExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		AF719A732085C327004E4C0C /* MessageFilterExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageFilterExtension.swift; sourceTree = "<group>"; };
 		AF719A752085C327004E4C0C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		AF719A7D2085E7D6004E4C0C /* PracticePlayground.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = PracticePlayground.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		AF8A8C6020A99629005DA20E /* CallDirectoryExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = CallDirectoryExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		AF8A8C6220A99629005DA20E /* CallDirectoryHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CallDirectoryHandler.swift; sourceTree = "<group>"; };
 		AF8A8C6420A99629005DA20E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AF8BB88420AD3DE2009B9282 /* PracticePlayground.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = PracticePlayground.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		AF8C65AB20ABFB2800E083A0 /* CallDirectoryExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = CallDirectoryExtension.entitlements; sourceTree = "<group>"; };
 		AF8C65AC20AC2BC700E083A0 /* PhoneSettingsExplorer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhoneSettingsExplorer.swift; sourceTree = "<group>"; };
+		AFA9CDBE20AD680900E25402 /* PhoneNumberParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhoneNumberParser.swift; sourceTree = "<group>"; };
 		AFBCE4E02087450B0033FFDF /* MessageFilter.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = MessageFilter.entitlements; sourceTree = "<group>"; };
 		AFBCE4E12087454A0033FFDF /* MessageFilterExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = MessageFilterExtension.entitlements; sourceTree = "<group>"; };
 		AFCD5CBD2088547A00110385 /* FilterNumbersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterNumbersViewController.swift; sourceTree = "<group>"; };
@@ -110,6 +122,8 @@
 		AFF3D18E2087116900375C68 /* StateController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StateController.swift; sourceTree = "<group>"; };
 		AFF3D19020871C0F00375C68 /* AddKeywordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddKeywordViewController.swift; sourceTree = "<group>"; };
 		AFF3D1962087285900375C68 /* StorageController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageController.swift; sourceTree = "<group>"; };
+		C17DED371CE83FDA3347E2A8 /* Pods_CallDirectoryExtension.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CallDirectoryExtension.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E4AF55C4A907316EB6744102 /* Pods-CallDirectoryExtension.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CallDirectoryExtension.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CallDirectoryExtension/Pods-CallDirectoryExtension.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -117,6 +131,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6BEB78B7DAE96B02F544E80F /* Pods_MessageFilter.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -124,6 +139,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				96C6ECBEA0CE971707F02455 /* Pods_MessageFilterExtension.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -131,12 +147,36 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FABD92F286B59134316F5DAE /* Pods_CallDirectoryExtension.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2BE3075CDE94D0C76169CE52 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				E4AF55C4A907316EB6744102 /* Pods-CallDirectoryExtension.debug.xcconfig */,
+				4821D3E9AAEACF4E1E259A0B /* Pods-CallDirectoryExtension.release.xcconfig */,
+				52270FBE129AAAEF7ABAA61A /* Pods-MessageFilter.debug.xcconfig */,
+				205055D04A4C77C46694D2ED /* Pods-MessageFilter.release.xcconfig */,
+				8615CDEC5C4A249FDE592E74 /* Pods-MessageFilterExtension.debug.xcconfig */,
+				0D7B3E45200105DA402F9D93 /* Pods-MessageFilterExtension.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		4D58F14FD2BCCCEE4B260776 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C17DED371CE83FDA3347E2A8 /* Pods_CallDirectoryExtension.framework */,
+				620B482ED181BA8666690399 /* Pods_MessageFilter.framework */,
+				2C7D026EB09D84CE8BF41CA8 /* Pods_MessageFilterExtension.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		AF6D975520AA8EDC00DFC8D5 /* Call Blocking */ = {
 			isa = PBXGroup;
 			children = (
@@ -165,6 +205,8 @@
 				AF719A722085C327004E4C0C /* MessageFilterExtension */,
 				AF8A8C6120A99629005DA20E /* CallDirectoryExtension */,
 				AF719A592085C275004E4C0C /* Products */,
+				2BE3075CDE94D0C76169CE52 /* Pods */,
+				4D58F14FD2BCCCEE4B260776 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -181,11 +223,11 @@
 		AF719A5A2085C275004E4C0C /* MessageFilter */ = {
 			isa = PBXGroup;
 			children = (
+				AF8BB88420AD3DE2009B9282 /* PracticePlayground.playground */,
 				AFBCE4E02087450B0033FFDF /* MessageFilter.entitlements */,
 				AFF3D1852087078A00375C68 /* Model */,
 				AFF3D1822087052C00375C68 /* Storage */,
 				AF8C65AE20AC2BD300E083A0 /* Utility */,
-				AF719A7D2085E7D6004E4C0C /* PracticePlayground.playground */,
 				AF719A5B2085C275004E4C0C /* AppDelegate.swift */,
 				AF6D975620AA981700DFC8D5 /* RootTabBarController.swift */,
 				AF6D975820AA99FA00DFC8D5 /* SMS Filtering */,
@@ -222,6 +264,7 @@
 			isa = PBXGroup;
 			children = (
 				AF8C65AC20AC2BC700E083A0 /* PhoneSettingsExplorer.swift */,
+				AFA9CDBE20AD680900E25402 /* PhoneNumberParser.swift */,
 			);
 			path = Utility;
 			sourceTree = "<group>";
@@ -273,10 +316,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = AF719A6A2085C275004E4C0C /* Build configuration list for PBXNativeTarget "MessageFilter" */;
 			buildPhases = (
+				78D85B4D056A80D7A51F8663 /* [CP] Check Pods Manifest.lock */,
 				AF719A542085C275004E4C0C /* Sources */,
 				AF719A552085C275004E4C0C /* Frameworks */,
 				AF719A562085C275004E4C0C /* Resources */,
 				AF719A7C2085C327004E4C0C /* Embed App Extensions */,
+				875E88F851575FDA0502B4CC /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -293,6 +338,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = AF719A792085C327004E4C0C /* Build configuration list for PBXNativeTarget "MessageFilterExtension" */;
 			buildPhases = (
+				5994E61B6CA7867EF079E689 /* [CP] Check Pods Manifest.lock */,
 				AF719A6D2085C327004E4C0C /* Sources */,
 				AF719A6E2085C327004E4C0C /* Frameworks */,
 				AF719A6F2085C327004E4C0C /* Resources */,
@@ -310,6 +356,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = AF8A8C6A20A99629005DA20E /* Build configuration list for PBXNativeTarget "CallDirectoryExtension" */;
 			buildPhases = (
+				1521DDB08DC58AE778F2B5AA /* [CP] Check Pods Manifest.lock */,
 				AF8A8C5C20A99629005DA20E /* Sources */,
 				AF8A8C5D20A99629005DA20E /* Frameworks */,
 				AF8A8C5E20A99629005DA20E /* Resources */,
@@ -409,6 +456,85 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		1521DDB08DC58AE778F2B5AA /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-CallDirectoryExtension-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		5994E61B6CA7867EF079E689 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-MessageFilterExtension-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		78D85B4D056A80D7A51F8663 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-MessageFilter-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		875E88F851575FDA0502B4CC /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-MessageFilter/Pods-MessageFilter-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/CTKFlagPhoneNumber/CTKFlagPhoneNumber.framework",
+				"${BUILT_PRODUCTS_DIR}/PhoneNumberKit/PhoneNumberKit.framework",
+				"${BUILT_PRODUCTS_DIR}/libPhoneNumber-iOS/libPhoneNumber_iOS.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CTKFlagPhoneNumber.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PhoneNumberKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/libPhoneNumber_iOS.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MessageFilter/Pods-MessageFilter-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		AF719A542085C275004E4C0C /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -424,6 +550,7 @@
 				AF6D975A20AA9B6300DFC8D5 /* BlockedListTableViewController.swift in Sources */,
 				AF6D975C20AA9BB300DFC8D5 /* BlockedListTableViewCell.swift in Sources */,
 				AFCD5CC12088553000110385 /* FilterNumbersTableViewCell.swift in Sources */,
+				AFA9CDBF20AD680900E25402 /* PhoneNumberParser.swift in Sources */,
 				AF23252F20AAB6AB00C56813 /* AddBlockNumberViewController.swift in Sources */,
 				AF719A5C2085C275004E4C0C /* AppDelegate.swift in Sources */,
 				AFF3D18D2087104F00375C68 /* Constants.swift in Sources */,
@@ -603,6 +730,7 @@
 		};
 		AF719A6B2085C275004E4C0C /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 52270FBE129AAAEF7ABAA61A /* Pods-MessageFilter.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -623,6 +751,7 @@
 		};
 		AF719A6C2085C275004E4C0C /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 205055D04A4C77C46694D2ED /* Pods-MessageFilter.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -642,6 +771,7 @@
 		};
 		AF719A7A2085C327004E4C0C /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8615CDEC5C4A249FDE592E74 /* Pods-MessageFilterExtension.debug.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_ENTITLEMENTS = MessageFilterExtension/MessageFilterExtension.entitlements;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -661,6 +791,7 @@
 		};
 		AF719A7B2085C327004E4C0C /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0D7B3E45200105DA402F9D93 /* Pods-MessageFilterExtension.release.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_ENTITLEMENTS = MessageFilterExtension/MessageFilterExtension.entitlements;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -679,6 +810,7 @@
 		};
 		AF8A8C6820A99629005DA20E /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E4AF55C4A907316EB6744102 /* Pods-CallDirectoryExtension.debug.xcconfig */;
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
 				CODE_SIGN_ENTITLEMENTS = CallDirectoryExtension/CallDirectoryExtension.entitlements;
@@ -699,6 +831,7 @@
 		};
 		AF8A8C6920A99629005DA20E /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4821D3E9AAEACF4E1E259A0B /* Pods-CallDirectoryExtension.release.xcconfig */;
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
 				CODE_SIGN_ENTITLEMENTS = CallDirectoryExtension/CallDirectoryExtension.entitlements;

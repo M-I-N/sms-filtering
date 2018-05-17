@@ -8,17 +8,17 @@
 
 import UIKit
 import CallKit
+import CTKFlagPhoneNumber
 
 class AddBlockNumberViewController: UIViewController {
     @IBOutlet weak var nameTextField: UITextField!
-    @IBOutlet weak var phoneNumberTextField: UITextField!
+    @IBOutlet weak var phoneNumberTextField: CTKFlagPhoneNumberTextField!
 
     var stateController: StateController!
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        setupCountryCodeTextField()
     }
 
     override func didReceiveMemoryWarning() {
@@ -27,6 +27,11 @@ class AddBlockNumberViewController: UIViewController {
     }
     
 
+    func setupCountryCodeTextField() {
+        phoneNumberTextField.parentViewController = self
+//        phoneNumberTextField.flagSize = CGSize(width: 20, height: 20)
+//        phoneNumberTextField.setFlag(with: "BD")
+    }
 
     // MARK: - Navigation
 
@@ -36,13 +41,28 @@ class AddBlockNumberViewController: UIViewController {
             return
         }
         let name = nameTextField.text ?? ""
-        let phoneNumber = phoneNumberTextField.text ?? ""
-        if let validPhoneNumber = CXCallDirectoryPhoneNumber(phoneNumber) {
+        let phoneNumber = phoneNumberTextField.getPhoneNumber()
+        /*do {
+            let validPhoneNumber = try phoneNumberKit.parse(phoneNumber)
+            let validPhoneNumberString = phoneNumberKit.format(validPhoneNumber, toType: .international)
+            if !validPhoneNumberString.isEmpty {
+                var callBlock: CallBlock
+                if name.isEmpty {
+                    callBlock = CallBlock(phoneNumber: validPhoneNumberString)
+                } else {
+                    callBlock = CallBlock(name: name, phoneNumber: validPhoneNumberString)
+                }
+                stateController.add(callBlock: callBlock)
+            }
+        } catch {
+            print(error.localizedDescription)
+        }*/
+        if let phoneNumber = phoneNumber {
             var callBlock: CallBlock
             if name.isEmpty {
-                callBlock = CallBlock(phoneNumber: validPhoneNumber)
+                callBlock = CallBlock(phoneNumber: phoneNumber)
             } else {
-                callBlock = CallBlock(name: name, phoneNumber: validPhoneNumber)
+                callBlock = CallBlock(name: name, phoneNumber: phoneNumber)
             }
             stateController.add(callBlock: callBlock)
         }

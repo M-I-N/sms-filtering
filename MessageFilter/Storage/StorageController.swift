@@ -33,7 +33,7 @@ class StorageController {
                 return nil
             }
         } else {
-            print("No initial words for filtering exists")
+            print("No initial filtering word exists")
             return nil
         }
     }
@@ -59,7 +59,7 @@ class StorageController {
                 return nil
             }
         } else {
-            print("No initial numbers for filtering exists")
+            print("No initial filtering number exists")
             return nil
         }
     }
@@ -85,15 +85,17 @@ class StorageController {
                 return []
             }
         } else {
-            print("No initial words for filtering exists")
+            print("No initial call blocking number exists")
             return []
         }
     }
 
     func loadAllPhoneNumbersToBeBlocked()-> [CXCallDirectoryPhoneNumber] {
         let callBlocks = fetchCallBlocks()
-        let allPhoneNumbers = callBlocks.map { $0.phoneNumber }.sorted()
-        return allPhoneNumbers
+        let allPhoneNumbers = callBlocks.map { CXCallDirectoryPhoneNumber($0.phoneNumber) ?? 1888_555_5555 }
+        // Remove the duplicate entries
+        let setWithAllPhoneNumbers = Set(allPhoneNumbers).sorted()
+        return setWithAllPhoneNumbers
     }
 
     func loadIncrementalPhoneNumbersToBeBlocked()-> (add : [CXCallDirectoryPhoneNumber], remove : [CXCallDirectoryPhoneNumber]) {

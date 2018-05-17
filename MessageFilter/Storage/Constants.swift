@@ -11,5 +11,7 @@ import Foundation
 struct Constants {
     static let wordsFilterUserDefaultsKey = "WordsFilterUserDefaultsKey"
     static let numbersFilterUserDefaultsKey = "NumbersFilterUserDefaultsKey"
+    static let blockedCallsUserDefaultsKey = "BlockedCallsUserDefaultsKey"
     static let userDefaultsSuiteKey = "group.com.bjitgroup.TalkMondo"
+    static let phoneNumbersAddedToBlockList = "PhoneNumbersAddedToBlockList"
 }

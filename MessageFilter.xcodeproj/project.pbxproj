@@ -7,7 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AF23252F20AAB6AB00C56813 /* AddBlockNumberViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF23252E20AAB6AB00C56813 /* AddBlockNumberViewController.swift */; };
+		AF23253020AAEBB500C56813 /* StorageController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFF3D1962087285900375C68 /* StorageController.swift */; };
 		AF47C33520884AA2001E20E0 /* MasterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF47C33420884AA2001E20E0 /* MasterViewController.swift */; };
+		AF6D975720AA981700DFC8D5 /* RootTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF6D975620AA981700DFC8D5 /* RootTabBarController.swift */; };
+		AF6D975A20AA9B6300DFC8D5 /* BlockedListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF6D975920AA9B6300DFC8D5 /* BlockedListTableViewController.swift */; };
+		AF6D975C20AA9BB300DFC8D5 /* BlockedListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF6D975B20AA9BB300DFC8D5 /* BlockedListTableViewCell.swift */; };
+		AF6D975E20AA9D8100DFC8D5 /* BlockedListTableViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF6D975D20AA9D8100DFC8D5 /* BlockedListTableViewDataSource.swift */; };
 		AF719A5C2085C275004E4C0C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF719A5B2085C275004E4C0C /* AppDelegate.swift */; };
 		AF719A5E2085C275004E4C0C /* FilterWordsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF719A5D2085C275004E4C0C /* FilterWordsViewController.swift */; };
 		AF719A612085C275004E4C0C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AF719A5F2085C275004E4C0C /* Main.storyboard */; };
@@ -15,6 +21,11 @@
 		AF719A662085C275004E4C0C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AF719A642085C275004E4C0C /* LaunchScreen.storyboard */; };
 		AF719A742085C327004E4C0C /* MessageFilterExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF719A732085C327004E4C0C /* MessageFilterExtension.swift */; };
 		AF719A782085C327004E4C0C /* MessageFilterExtension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = AF719A712085C327004E4C0C /* MessageFilterExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		AF8A8C6320A99629005DA20E /* CallDirectoryHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF8A8C6220A99629005DA20E /* CallDirectoryHandler.swift */; };
+		AF8A8C6720A99629005DA20E /* CallDirectoryExtension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = AF8A8C6020A99629005DA20E /* CallDirectoryExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		AF8C65A920ABF53200E083A0 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFF3D186208707A000375C68 /* Model.swift */; };
+		AF8C65AA20ABF54800E083A0 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFF3D18C2087104F00375C68 /* Constants.swift */; };
+		AF8C65AD20AC2BC700E083A0 /* PhoneSettingsExplorer.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF8C65AC20AC2BC700E083A0 /* PhoneSettingsExplorer.swift */; };
 		AFBCE4E22087500C0033FFDF /* StorageController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFF3D1962087285900375C68 /* StorageController.swift */; };
 		AFBCE4E3208750310033FFDF /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFF3D186208707A000375C68 /* Model.swift */; };
 		AFBCE4E42087536A0033FFDF /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFF3D18C2087104F00375C68 /* Constants.swift */; };
@@ -39,6 +50,13 @@
 			remoteGlobalIDString = AF719A702085C327004E4C0C;
 			remoteInfo = MessageFilterExtension;
 		};
+		AF8A8C6520A99629005DA20E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = AF719A502085C275004E4C0C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = AF8A8C5F20A99629005DA20E;
+			remoteInfo = CallDirectoryExtension;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -48,6 +66,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 13;
 			files = (
+				AF8A8C6720A99629005DA20E /* CallDirectoryExtension.appex in Embed App Extensions */,
 				AF719A782085C327004E4C0C /* MessageFilterExtension.appex in Embed App Extensions */,
 			);
 			name = "Embed App Extensions";
@@ -56,7 +75,12 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		AF23252E20AAB6AB00C56813 /* AddBlockNumberViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddBlockNumberViewController.swift; sourceTree = "<group>"; };
 		AF47C33420884AA2001E20E0 /* MasterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MasterViewController.swift; sourceTree = "<group>"; };
+		AF6D975620AA981700DFC8D5 /* RootTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootTabBarController.swift; sourceTree = "<group>"; };
+		AF6D975920AA9B6300DFC8D5 /* BlockedListTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlockedListTableViewController.swift; sourceTree = "<group>"; };
+		AF6D975B20AA9BB300DFC8D5 /* BlockedListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlockedListTableViewCell.swift; sourceTree = "<group>"; };
+		AF6D975D20AA9D8100DFC8D5 /* BlockedListTableViewDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlockedListTableViewDataSource.swift; sourceTree = "<group>"; };
 		AF719A582085C275004E4C0C /* MessageFilter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MessageFilter.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AF719A5B2085C275004E4C0C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AF719A5D2085C275004E4C0C /* FilterWordsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterWordsViewController.swift; sourceTree = "<group>"; };
@@ -68,6 +92,11 @@
 		AF719A732085C327004E4C0C /* MessageFilterExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageFilterExtension.swift; sourceTree = "<group>"; };
 		AF719A752085C327004E4C0C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AF719A7D2085E7D6004E4C0C /* PracticePlayground.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = PracticePlayground.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
+		AF8A8C6020A99629005DA20E /* CallDirectoryExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = CallDirectoryExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		AF8A8C6220A99629005DA20E /* CallDirectoryHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CallDirectoryHandler.swift; sourceTree = "<group>"; };
+		AF8A8C6420A99629005DA20E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AF8C65AB20ABFB2800E083A0 /* CallDirectoryExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = CallDirectoryExtension.entitlements; sourceTree = "<group>"; };
+		AF8C65AC20AC2BC700E083A0 /* PhoneSettingsExplorer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhoneSettingsExplorer.swift; sourceTree = "<group>"; };
 		AFBCE4E02087450B0033FFDF /* MessageFilter.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = MessageFilter.entitlements; sourceTree = "<group>"; };
 		AFBCE4E12087454A0033FFDF /* MessageFilterExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = MessageFilterExtension.entitlements; sourceTree = "<group>"; };
 		AFCD5CBD2088547A00110385 /* FilterNumbersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterNumbersViewController.swift; sourceTree = "<group>"; };
@@ -98,14 +127,43 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		AF8A8C5D20A99629005DA20E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		AF6D975520AA8EDC00DFC8D5 /* Call Blocking */ = {
+			isa = PBXGroup;
+			children = (
+				AF6D975920AA9B6300DFC8D5 /* BlockedListTableViewController.swift */,
+				AF6D975B20AA9BB300DFC8D5 /* BlockedListTableViewCell.swift */,
+				AF6D975D20AA9D8100DFC8D5 /* BlockedListTableViewDataSource.swift */,
+				AF23252E20AAB6AB00C56813 /* AddBlockNumberViewController.swift */,
+			);
+			path = "Call Blocking";
+			sourceTree = "<group>";
+		};
+		AF6D975820AA99FA00DFC8D5 /* SMS Filtering */ = {
+			isa = PBXGroup;
+			children = (
+				AF47C33420884AA2001E20E0 /* MasterViewController.swift */,
+				AFCD5CBF2088549100110385 /* Number Filtering */,
+				AFCD5CBC2088545300110385 /* Word Filtering */,
+			);
+			path = "SMS Filtering";
+			sourceTree = "<group>";
+		};
 		AF719A4F2085C275004E4C0C = {
 			isa = PBXGroup;
 			children = (
 				AF719A5A2085C275004E4C0C /* MessageFilter */,
 				AF719A722085C327004E4C0C /* MessageFilterExtension */,
+				AF8A8C6120A99629005DA20E /* CallDirectoryExtension */,
 				AF719A592085C275004E4C0C /* Products */,
 			);
 			sourceTree = "<group>";
@@ -115,6 +173,7 @@
 			children = (
 				AF719A582085C275004E4C0C /* MessageFilter.app */,
 				AF719A712085C327004E4C0C /* MessageFilterExtension.appex */,
+				AF8A8C6020A99629005DA20E /* CallDirectoryExtension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -125,11 +184,12 @@
 				AFBCE4E02087450B0033FFDF /* MessageFilter.entitlements */,
 				AFF3D1852087078A00375C68 /* Model */,
 				AFF3D1822087052C00375C68 /* Storage */,
+				AF8C65AE20AC2BD300E083A0 /* Utility */,
 				AF719A7D2085E7D6004E4C0C /* PracticePlayground.playground */,
 				AF719A5B2085C275004E4C0C /* AppDelegate.swift */,
-				AF47C33420884AA2001E20E0 /* MasterViewController.swift */,
-				AFCD5CBF2088549100110385 /* Number Filtering */,
-				AFCD5CBC2088545300110385 /* Word Filtering */,
+				AF6D975620AA981700DFC8D5 /* RootTabBarController.swift */,
+				AF6D975820AA99FA00DFC8D5 /* SMS Filtering */,
+				AF6D975520AA8EDC00DFC8D5 /* Call Blocking */,
 				AF719A5F2085C275004E4C0C /* Main.storyboard */,
 				AF719A622085C275004E4C0C /* Assets.xcassets */,
 				AF719A642085C275004E4C0C /* LaunchScreen.storyboard */,
@@ -146,6 +206,24 @@
 				AF719A752085C327004E4C0C /* Info.plist */,
 			);
 			path = MessageFilterExtension;
+			sourceTree = "<group>";
+		};
+		AF8A8C6120A99629005DA20E /* CallDirectoryExtension */ = {
+			isa = PBXGroup;
+			children = (
+				AF8C65AB20ABFB2800E083A0 /* CallDirectoryExtension.entitlements */,
+				AF8A8C6220A99629005DA20E /* CallDirectoryHandler.swift */,
+				AF8A8C6420A99629005DA20E /* Info.plist */,
+			);
+			path = CallDirectoryExtension;
+			sourceTree = "<group>";
+		};
+		AF8C65AE20AC2BD300E083A0 /* Utility */ = {
+			isa = PBXGroup;
+			children = (
+				AF8C65AC20AC2BC700E083A0 /* PhoneSettingsExplorer.swift */,
+			);
+			path = Utility;
 			sourceTree = "<group>";
 		};
 		AFCD5CBC2088545300110385 /* Word Filtering */ = {
@@ -204,6 +282,7 @@
 			);
 			dependencies = (
 				AF719A772085C327004E4C0C /* PBXTargetDependency */,
+				AF8A8C6620A99629005DA20E /* PBXTargetDependency */,
 			);
 			name = MessageFilter;
 			productName = MessageFilter;
@@ -227,6 +306,23 @@
 			productReference = AF719A712085C327004E4C0C /* MessageFilterExtension.appex */;
 			productType = "com.apple.product-type.app-extension";
 		};
+		AF8A8C5F20A99629005DA20E /* CallDirectoryExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AF8A8C6A20A99629005DA20E /* Build configuration list for PBXNativeTarget "CallDirectoryExtension" */;
+			buildPhases = (
+				AF8A8C5C20A99629005DA20E /* Sources */,
+				AF8A8C5D20A99629005DA20E /* Frameworks */,
+				AF8A8C5E20A99629005DA20E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = CallDirectoryExtension;
+			productName = CallDirectoryExtension;
+			productReference = AF8A8C6020A99629005DA20E /* CallDirectoryExtension.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -239,7 +335,7 @@
 				TargetAttributes = {
 					AF719A572085C275004E4C0C = {
 						CreatedOnToolsVersion = 9.0;
-						ProvisioningStyle = Manual;
+						ProvisioningStyle = Automatic;
 						SystemCapabilities = {
 							com.apple.ApplicationGroups.iOS = {
 								enabled = 1;
@@ -248,7 +344,16 @@
 					};
 					AF719A702085C327004E4C0C = {
 						CreatedOnToolsVersion = 9.0;
-						ProvisioningStyle = Manual;
+						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.ApplicationGroups.iOS = {
+								enabled = 1;
+							};
+						};
+					};
+					AF8A8C5F20A99629005DA20E = {
+						CreatedOnToolsVersion = 9.0;
+						ProvisioningStyle = Automatic;
 						SystemCapabilities = {
 							com.apple.ApplicationGroups.iOS = {
 								enabled = 1;
@@ -272,6 +377,7 @@
 			targets = (
 				AF719A572085C275004E4C0C /* MessageFilter */,
 				AF719A702085C327004E4C0C /* MessageFilterExtension */,
+				AF8A8C5F20A99629005DA20E /* CallDirectoryExtension */,
 			);
 		};
 /* End PBXProject section */
@@ -294,6 +400,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		AF8A8C5E20A99629005DA20E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -302,14 +415,20 @@
 			buildActionMask = 2147483647;
 			files = (
 				AFCD5CC3208855A200110385 /* FilterNumbersTableViewDataSource.swift in Sources */,
+				AF6D975720AA981700DFC8D5 /* RootTabBarController.swift in Sources */,
 				AFCD5CBE2088547A00110385 /* FilterNumbersViewController.swift in Sources */,
+				AF6D975E20AA9D8100DFC8D5 /* BlockedListTableViewDataSource.swift in Sources */,
 				AF47C33520884AA2001E20E0 /* MasterViewController.swift in Sources */,
 				AFF3D18B20870C3900375C68 /* FilterWordsTableViewCell.swift in Sources */,
 				AF719A5E2085C275004E4C0C /* FilterWordsViewController.swift in Sources */,
+				AF6D975A20AA9B6300DFC8D5 /* BlockedListTableViewController.swift in Sources */,
+				AF6D975C20AA9BB300DFC8D5 /* BlockedListTableViewCell.swift in Sources */,
 				AFCD5CC12088553000110385 /* FilterNumbersTableViewCell.swift in Sources */,
+				AF23252F20AAB6AB00C56813 /* AddBlockNumberViewController.swift in Sources */,
 				AF719A5C2085C275004E4C0C /* AppDelegate.swift in Sources */,
 				AFF3D18D2087104F00375C68 /* Constants.swift in Sources */,
 				AFF3D19120871C0F00375C68 /* AddKeywordViewController.swift in Sources */,
+				AF8C65AD20AC2BC700E083A0 /* PhoneSettingsExplorer.swift in Sources */,
 				AFF3D18F2087116900375C68 /* StateController.swift in Sources */,
 				AFF3D18920870ABE00375C68 /* FilterWordsTableViewDataSource.swift in Sources */,
 				AFCD5CC5208855BF00110385 /* AddNumberViewController.swift in Sources */,
@@ -329,6 +448,17 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		AF8A8C5C20A99629005DA20E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AF8C65A920ABF53200E083A0 /* Model.swift in Sources */,
+				AF8A8C6320A99629005DA20E /* CallDirectoryHandler.swift in Sources */,
+				AF23253020AAEBB500C56813 /* StorageController.swift in Sources */,
+				AF8C65AA20ABF54800E083A0 /* Constants.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -336,6 +466,11 @@
 			isa = PBXTargetDependency;
 			target = AF719A702085C327004E4C0C /* MessageFilterExtension */;
 			targetProxy = AF719A762085C327004E4C0C /* PBXContainerItemProxy */;
+		};
+		AF8A8C6620A99629005DA20E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = AF8A8C5F20A99629005DA20E /* CallDirectoryExtension */;
+			targetProxy = AF8A8C6520A99629005DA20E /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -472,14 +607,15 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = MessageFilter/MessageFilter.entitlements;
-				CODE_SIGN_STYLE = Manual;
-				DEVELOPMENT_TEAM = 2BL4KQW6R5;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = MessageFilter/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-                PRODUCT_BUNDLE_IDENTIFIER = com.bjitgroup.MessageFilter;
+				PRODUCT_BUNDLE_IDENTIFIER = com.bjitgroup.MessageFilter;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-                PROVISIONING_PROFILE = "57bf95a5-0982-4eac-a5e6-e1edd9a5451f";
-                PROVISIONING_PROFILE_SPECIFIER = BJITWILDCARDDEV;
+				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -491,11 +627,12 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = MessageFilter/MessageFilter.entitlements;
-				CODE_SIGN_STYLE = Manual;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = MessageFilter/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-                PRODUCT_BUNDLE_IDENTIFIER = com.bjitgroup.MessageFilter;
+				PRODUCT_BUNDLE_IDENTIFIER = com.bjitgroup.MessageFilter;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.0;
@@ -507,14 +644,15 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_ENTITLEMENTS = MessageFilterExtension/MessageFilterExtension.entitlements;
-				CODE_SIGN_STYLE = Manual;
-				DEVELOPMENT_TEAM = 2BL4KQW6R5;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = MessageFilterExtension/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
-                PRODUCT_BUNDLE_IDENTIFIER = com.bjitgroup.MessageFilter.MessageFilterExtension;
+				PRODUCT_BUNDLE_IDENTIFIER = com.bjitgroup.MessageFilter.MessageFilterExtension;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-                PROVISIONING_PROFILE = "57bf95a5-0982-4eac-a5e6-e1edd9a5451f";
-                PROVISIONING_PROFILE_SPECIFIER = BJITWILDCARDDEV;
+				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -525,11 +663,51 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_ENTITLEMENTS = MessageFilterExtension/MessageFilterExtension.entitlements;
-				CODE_SIGN_STYLE = Manual;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = MessageFilterExtension/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
-                PRODUCT_BUNDLE_IDENTIFIER = com.bjitgroup.MessageFilter.MessageFilterExtension;
+				PRODUCT_BUNDLE_IDENTIFIER = com.bjitgroup.MessageFilter.MessageFilterExtension;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		AF8A8C6820A99629005DA20E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CODE_SIGN_ENTITLEMENTS = CallDirectoryExtension/CallDirectoryExtension.entitlements;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = "";
+				INFOPLIST_FILE = CallDirectoryExtension/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.bjitgroup.MessageFilter.CallDirectoryExtension;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		AF8A8C6920A99629005DA20E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CODE_SIGN_ENTITLEMENTS = CallDirectoryExtension/CallDirectoryExtension.entitlements;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = "";
+				INFOPLIST_FILE = CallDirectoryExtension/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.bjitgroup.MessageFilter.CallDirectoryExtension;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SKIP_INSTALL = YES;
@@ -564,6 +742,15 @@
 			buildConfigurations = (
 				AF719A7A2085C327004E4C0C /* Debug */,
 				AF719A7B2085C327004E4C0C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AF8A8C6A20A99629005DA20E /* Build configuration list for PBXNativeTarget "CallDirectoryExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AF8A8C6820A99629005DA20E /* Debug */,
+				AF8A8C6920A99629005DA20E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

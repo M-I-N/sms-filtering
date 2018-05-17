@@ -19,8 +19,8 @@ struct NumberFilter: Codable {
 
 struct CallBlock: Codable {
     let name: String
-    let phoneNumber: CXCallDirectoryPhoneNumber
-    init(name: String = "Unknown", phoneNumber: CXCallDirectoryPhoneNumber) {
+    let phoneNumber: String
+    init(name: String = "Unknown", phoneNumber: String) {
         self.name = name
         self.phoneNumber = phoneNumber
     }

@@ -37,12 +37,12 @@ class AddBlockNumberViewController: UIViewController {
         }
         let name = nameTextField.text ?? ""
         let phoneNumber = phoneNumberTextField.text ?? ""
-        if let validPhoneNumber = CXCallDirectoryPhoneNumber(phoneNumber) {
+        if !phoneNumber.isEmpty {
             var callBlock: CallBlock
             if name.isEmpty {
-                callBlock = CallBlock(phoneNumber: validPhoneNumber)
+                callBlock = CallBlock(phoneNumber: phoneNumber)
             } else {
-                callBlock = CallBlock(name: name, phoneNumber: validPhoneNumber)
+                callBlock = CallBlock(name: name, phoneNumber: phoneNumber)
             }
             stateController.add(callBlock: callBlock)
         }

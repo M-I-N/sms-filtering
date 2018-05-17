@@ -92,8 +92,10 @@ class StorageController {
 
     func loadAllPhoneNumbersToBeBlocked()-> [CXCallDirectoryPhoneNumber] {
         let callBlocks = fetchCallBlocks()
-        let allPhoneNumbers = callBlocks.map { $0.phoneNumber }.sorted()
-        return allPhoneNumbers
+        let allPhoneNumbers = callBlocks.map { CXCallDirectoryPhoneNumber($0.phoneNumber) ?? 1888_555_5555 }
+        // Remove the duplicate entries
+        let setWithAllPhoneNumbers = Set(allPhoneNumbers).sorted()
+        return setWithAllPhoneNumbers
     }
 
     func loadIncrementalPhoneNumbersToBeBlocked()-> (add : [CXCallDirectoryPhoneNumber], remove : [CXCallDirectoryPhoneNumber]) {

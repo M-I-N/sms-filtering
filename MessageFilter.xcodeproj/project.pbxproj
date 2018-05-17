@@ -91,10 +91,10 @@
 		AF719A712085C327004E4C0C /* MessageFilterExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = MessageFilterExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		AF719A732085C327004E4C0C /* MessageFilterExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageFilterExtension.swift; sourceTree = "<group>"; };
 		AF719A752085C327004E4C0C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		AF719A7D2085E7D6004E4C0C /* PracticePlayground.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = PracticePlayground.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		AF8A8C6020A99629005DA20E /* CallDirectoryExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = CallDirectoryExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		AF8A8C6220A99629005DA20E /* CallDirectoryHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CallDirectoryHandler.swift; sourceTree = "<group>"; };
 		AF8A8C6420A99629005DA20E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AF8BB88420AD3DE2009B9282 /* PracticePlayground.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = PracticePlayground.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		AF8C65AB20ABFB2800E083A0 /* CallDirectoryExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = CallDirectoryExtension.entitlements; sourceTree = "<group>"; };
 		AF8C65AC20AC2BC700E083A0 /* PhoneSettingsExplorer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhoneSettingsExplorer.swift; sourceTree = "<group>"; };
 		AFBCE4E02087450B0033FFDF /* MessageFilter.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = MessageFilter.entitlements; sourceTree = "<group>"; };
@@ -181,11 +181,11 @@
 		AF719A5A2085C275004E4C0C /* MessageFilter */ = {
 			isa = PBXGroup;
 			children = (
+				AF8BB88420AD3DE2009B9282 /* PracticePlayground.playground */,
 				AFBCE4E02087450B0033FFDF /* MessageFilter.entitlements */,
 				AFF3D1852087078A00375C68 /* Model */,
 				AFF3D1822087052C00375C68 /* Storage */,
 				AF8C65AE20AC2BD300E083A0 /* Utility */,
-				AF719A7D2085E7D6004E4C0C /* PracticePlayground.playground */,
 				AF719A5B2085C275004E4C0C /* AppDelegate.swift */,
 				AF6D975620AA981700DFC8D5 /* RootTabBarController.swift */,
 				AF6D975820AA99FA00DFC8D5 /* SMS Filtering */,

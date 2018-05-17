@@ -18,9 +18,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Override point for customization after application launch.
 
         let initialController = window?.rootViewController as! UINavigationController
-        let filterWordsViewController = initialController.viewControllers.first as! FilterWordsViewController
+        let masterViewController = initialController.viewControllers.first as! MasterViewController
         let stateController = StateController(storageController: StorageController())
-        filterWordsViewController.stateController = stateController
+        masterViewController.stateController = stateController
         return true
     }
 

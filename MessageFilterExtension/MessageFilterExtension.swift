@@ -21,7 +21,11 @@ final class MessageFilterExtension: ILMessageFilterExtension {
     }()*/
 
     private lazy var wordsToFiler: [String] = {
-        return storageController.fetchFilter()?.words ?? [String]()
+        return storageController.fetchWordFilter()?.words ?? [String]()
+    }()
+
+    private lazy var numbersToFilter: [String] = {
+        return storageController.fetchNumberFilter()?.numbers ?? [String]()
     }()
 
     let storageController = StorageController()
@@ -63,14 +67,13 @@ extension MessageFilterExtension: ILMessageFilterQueryHandling {
     
     private func offlineAction(for queryRequest: ILMessageFilterQueryRequest) -> ILMessageFilterAction {
         // Replace with logic to perform offline check whether to filter first (if possible).
-        guard let messageBody = queryRequest.messageBody else { return .none }
-
-        if let messageSender = queryRequest.sender {
-            print(messageSender)
+        guard let messageBody = queryRequest.messageBody, let messageSender = queryRequest.sender else {
+            return .none
         }
+//        print(messageSender)
 //        print(messageBody)
 //        print(wordsToFiler)
-        return wordsToFiler.map { $0.lowercased() }.contains(where: messageBody.lowercased().contains) ? .filter : .none
+        return wordsToFiler.map { $0.lowercased() }.contains(where: messageBody.lowercased().contains) || numbersToFilter.contains(where: messageSender.contains) ? .filter : .none
     }
     
     private func action(for networkResponse: ILNetworkResponse) -> ILMessageFilterAction {

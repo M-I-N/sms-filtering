@@ -8,6 +8,10 @@
 
 import Foundation
 
-struct Filter: Codable {
+struct WordFilter: Codable {
     let words: [String]
+}
+
+struct NumberFilter: Codable {
+    let numbers: [String]
 }

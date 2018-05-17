@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AF47C33520884AA2001E20E0 /* MasterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF47C33420884AA2001E20E0 /* MasterViewController.swift */; };
 		AF719A5C2085C275004E4C0C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF719A5B2085C275004E4C0C /* AppDelegate.swift */; };
 		AF719A5E2085C275004E4C0C /* FilterWordsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF719A5D2085C275004E4C0C /* FilterWordsViewController.swift */; };
 		AF719A612085C275004E4C0C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AF719A5F2085C275004E4C0C /* Main.storyboard */; };
@@ -17,6 +18,10 @@
 		AFBCE4E22087500C0033FFDF /* StorageController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFF3D1962087285900375C68 /* StorageController.swift */; };
 		AFBCE4E3208750310033FFDF /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFF3D186208707A000375C68 /* Model.swift */; };
 		AFBCE4E42087536A0033FFDF /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFF3D18C2087104F00375C68 /* Constants.swift */; };
+		AFCD5CBE2088547A00110385 /* FilterNumbersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFCD5CBD2088547A00110385 /* FilterNumbersViewController.swift */; };
+		AFCD5CC12088553000110385 /* FilterNumbersTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFCD5CC02088553000110385 /* FilterNumbersTableViewCell.swift */; };
+		AFCD5CC3208855A200110385 /* FilterNumbersTableViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFCD5CC2208855A200110385 /* FilterNumbersTableViewDataSource.swift */; };
+		AFCD5CC5208855BF00110385 /* AddNumberViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFCD5CC4208855BF00110385 /* AddNumberViewController.swift */; };
 		AFF3D187208707A000375C68 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFF3D186208707A000375C68 /* Model.swift */; };
 		AFF3D18920870ABE00375C68 /* FilterWordsTableViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFF3D18820870ABE00375C68 /* FilterWordsTableViewDataSource.swift */; };
 		AFF3D18B20870C3900375C68 /* FilterWordsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFF3D18A20870C3900375C68 /* FilterWordsTableViewCell.swift */; };
@@ -51,6 +56,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		AF47C33420884AA2001E20E0 /* MasterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MasterViewController.swift; sourceTree = "<group>"; };
 		AF719A582085C275004E4C0C /* MessageFilter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MessageFilter.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AF719A5B2085C275004E4C0C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AF719A5D2085C275004E4C0C /* FilterWordsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterWordsViewController.swift; sourceTree = "<group>"; };
@@ -64,6 +70,10 @@
 		AF719A7D2085E7D6004E4C0C /* PracticePlayground.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = PracticePlayground.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		AFBCE4E02087450B0033FFDF /* MessageFilter.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = MessageFilter.entitlements; sourceTree = "<group>"; };
 		AFBCE4E12087454A0033FFDF /* MessageFilterExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = MessageFilterExtension.entitlements; sourceTree = "<group>"; };
+		AFCD5CBD2088547A00110385 /* FilterNumbersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterNumbersViewController.swift; sourceTree = "<group>"; };
+		AFCD5CC02088553000110385 /* FilterNumbersTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterNumbersTableViewCell.swift; sourceTree = "<group>"; };
+		AFCD5CC2208855A200110385 /* FilterNumbersTableViewDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterNumbersTableViewDataSource.swift; sourceTree = "<group>"; };
+		AFCD5CC4208855BF00110385 /* AddNumberViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNumberViewController.swift; sourceTree = "<group>"; };
 		AFF3D186208707A000375C68 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 		AFF3D18820870ABE00375C68 /* FilterWordsTableViewDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterWordsTableViewDataSource.swift; sourceTree = "<group>"; };
 		AFF3D18A20870C3900375C68 /* FilterWordsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterWordsTableViewCell.swift; sourceTree = "<group>"; };
@@ -117,10 +127,9 @@
 				AFF3D1822087052C00375C68 /* Storage */,
 				AF719A7D2085E7D6004E4C0C /* PracticePlayground.playground */,
 				AF719A5B2085C275004E4C0C /* AppDelegate.swift */,
-				AF719A5D2085C275004E4C0C /* FilterWordsViewController.swift */,
-				AFF3D19020871C0F00375C68 /* AddKeywordViewController.swift */,
-				AFF3D18820870ABE00375C68 /* FilterWordsTableViewDataSource.swift */,
-				AFF3D18A20870C3900375C68 /* FilterWordsTableViewCell.swift */,
+				AF47C33420884AA2001E20E0 /* MasterViewController.swift */,
+				AFCD5CBF2088549100110385 /* Number Filtering */,
+				AFCD5CBC2088545300110385 /* Word Filtering */,
 				AF719A5F2085C275004E4C0C /* Main.storyboard */,
 				AF719A622085C275004E4C0C /* Assets.xcassets */,
 				AF719A642085C275004E4C0C /* LaunchScreen.storyboard */,
@@ -137,6 +146,28 @@
 				AF719A752085C327004E4C0C /* Info.plist */,
 			);
 			path = MessageFilterExtension;
+			sourceTree = "<group>";
+		};
+		AFCD5CBC2088545300110385 /* Word Filtering */ = {
+			isa = PBXGroup;
+			children = (
+				AF719A5D2085C275004E4C0C /* FilterWordsViewController.swift */,
+				AFF3D19020871C0F00375C68 /* AddKeywordViewController.swift */,
+				AFF3D18820870ABE00375C68 /* FilterWordsTableViewDataSource.swift */,
+				AFF3D18A20870C3900375C68 /* FilterWordsTableViewCell.swift */,
+			);
+			path = "Word Filtering";
+			sourceTree = "<group>";
+		};
+		AFCD5CBF2088549100110385 /* Number Filtering */ = {
+			isa = PBXGroup;
+			children = (
+				AFCD5CBD2088547A00110385 /* FilterNumbersViewController.swift */,
+				AFCD5CC02088553000110385 /* FilterNumbersTableViewCell.swift */,
+				AFCD5CC2208855A200110385 /* FilterNumbersTableViewDataSource.swift */,
+				AFCD5CC4208855BF00110385 /* AddNumberViewController.swift */,
+			);
+			path = "Number Filtering";
 			sourceTree = "<group>";
 		};
 		AFF3D1822087052C00375C68 /* Storage */ = {
@@ -270,13 +301,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AFCD5CC3208855A200110385 /* FilterNumbersTableViewDataSource.swift in Sources */,
+				AFCD5CBE2088547A00110385 /* FilterNumbersViewController.swift in Sources */,
+				AF47C33520884AA2001E20E0 /* MasterViewController.swift in Sources */,
 				AFF3D18B20870C3900375C68 /* FilterWordsTableViewCell.swift in Sources */,
 				AF719A5E2085C275004E4C0C /* FilterWordsViewController.swift in Sources */,
+				AFCD5CC12088553000110385 /* FilterNumbersTableViewCell.swift in Sources */,
 				AF719A5C2085C275004E4C0C /* AppDelegate.swift in Sources */,
 				AFF3D18D2087104F00375C68 /* Constants.swift in Sources */,
 				AFF3D19120871C0F00375C68 /* AddKeywordViewController.swift in Sources */,
 				AFF3D18F2087116900375C68 /* StateController.swift in Sources */,
 				AFF3D18920870ABE00375C68 /* FilterWordsTableViewDataSource.swift in Sources */,
+				AFCD5CC5208855BF00110385 /* AddNumberViewController.swift in Sources */,
 				AFF3D187208707A000375C68 /* Model.swift in Sources */,
 				AFF3D1972087285900375C68 /* StorageController.swift in Sources */,
 			);

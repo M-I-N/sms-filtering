@@ -1,22 +1,22 @@
 //
-//  ViewController.swift
+//  FilterNumbersViewController.swift
 //  MessageFilter
 //
-//  Created by Nayem BJIT on 4/17/18.
+//  Created by Nayem BJIT on 4/19/18.
 //  Copyright © 2018 BJIT Ltd. All rights reserved.
 //
 
 import UIKit
 
-class FilterWordsViewController: UIViewController {
+class FilterNumbersViewController: UIViewController {
     @IBOutlet private weak var tableView: UITableView!
 
     var stateController: StateController!
-    private var dataSource: FilterWordsTableViewDataSource!
+    private var dataSource: FilterNumbersTableViewDataSource!
 
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        dataSource = FilterWordsTableViewDataSource(words: stateController.words)
+        dataSource = FilterNumbersTableViewDataSource(numbers: stateController.numbers)
         tableView.dataSource = dataSource
         tableView.reloadData()
     }
@@ -25,10 +25,11 @@ class FilterWordsViewController: UIViewController {
         super.didReceiveMemoryWarning()
     }
 
+    // MARK: - Navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         switch segue.identifier! {
-        case "AddKeywordsSegue":
-            if let navigationController = segue.destination as? UINavigationController, let addKeywordViewController = navigationController.viewControllers.first as? AddKeywordViewController {
+        case "AddNumberSegue":
+            if let navigationController = segue.destination as? UINavigationController, let addKeywordViewController = navigationController.viewControllers.first as? AddNumberViewController {
                 addKeywordViewController.stateController = stateController
             }
         default:
@@ -36,8 +37,7 @@ class FilterWordsViewController: UIViewController {
         }
     }
 
-    @IBAction func cancelAddKeyword(_ segue: UIStoryboardSegue) {}
-    @IBAction func saveKeyword(_ segue: UIStoryboardSegue) {}
+    @IBAction func cancelAddNumber(_ segue: UIStoryboardSegue) {}
+    @IBAction func saveNumber(_ segue: UIStoryboardSegue) {}
 
 }
-

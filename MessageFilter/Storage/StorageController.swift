@@ -22,7 +22,7 @@ class StorageController {
         }
     }
 
-    func fetchWordFilter()-> WordFilter? {
+    func fetchWordFilter() -> WordFilter? {
         if let data = userDefaults.data(forKey: Constants.wordsFilterUserDefaultsKey) {
             let decoder = JSONDecoder()
             do {
@@ -48,7 +48,7 @@ class StorageController {
         }
     }
 
-    func fetchNumberFilter()-> NumberFilter? {
+    func fetchNumberFilter() -> NumberFilter? {
         if let data = userDefaults.data(forKey: Constants.numbersFilterUserDefaultsKey) {
             let decoder = JSONDecoder()
             do {
@@ -74,7 +74,7 @@ class StorageController {
         }
     }
 
-    func fetchCallBlocks()-> [CallBlock] {
+    func fetchCallBlocks() -> [CallBlock] {
         if let data = userDefaults.data(forKey: Constants.blockedCallsUserDefaultsKey) {
             let decoder = JSONDecoder()
             do {
@@ -90,7 +90,7 @@ class StorageController {
         }
     }
 
-    func loadAllPhoneNumbersToBeBlocked()-> [CXCallDirectoryPhoneNumber] {
+    func loadAllPhoneNumbersToBeBlocked() -> [CXCallDirectoryPhoneNumber] {
         let callBlocks = fetchCallBlocks()
         let allPhoneNumbers = callBlocks.map { CXCallDirectoryPhoneNumber($0.phoneNumber) ?? 1888_555_5555 }
         // Remove the duplicate entries
@@ -98,26 +98,14 @@ class StorageController {
         return setWithAllPhoneNumbers
     }
 
-    func loadIncrementalPhoneNumbersToBeBlocked()-> (add : [CXCallDirectoryPhoneNumber], remove : [CXCallDirectoryPhoneNumber]) {
+    func loadIncrementalPhoneNumbersToBeBlocked() -> (add : [CXCallDirectoryPhoneNumber], remove : [CXCallDirectoryPhoneNumber]) {
         let (all, markedAsAdded) = loadBlockList()
         let numbersToBeAdded = all.filter { return !markedAsAdded.contains($0) }.sorted()
         let numbersToBeRemoved = markedAsAdded.filter { return !all.contains($0) }.sorted()
         return (numbersToBeAdded, numbersToBeRemoved)
     }
-/*
-    private func loadPhoneNumbersToAddForBlocking()-> [CXCallDirectoryPhoneNumber] {
-        let (all, markedAsAdded) = loadBlockList()
-        let numbersToBeAdded = all.filter { return !markedAsAdded.contains($0) }.sorted()
-        return numbersToBeAdded
-    }
 
-    private func loadPhoneNumbersToRemoveFromBlocking()-> [CXCallDirectoryPhoneNumber] {
-        let (all, markedAsAdded) = loadBlockList()
-        let numbersToBeRemoved = markedAsAdded.filter { return !all.contains($0) }.sorted()
-        return numbersToBeRemoved
-    }
-*/
-    private func loadBlockList()-> (all: [CXCallDirectoryPhoneNumber], markedAsAdded: [CXCallDirectoryPhoneNumber]) {
+    private func loadBlockList() -> (all: [CXCallDirectoryPhoneNumber], markedAsAdded: [CXCallDirectoryPhoneNumber]) {
         return (loadAllPhoneNumbersToBeBlocked(), recordedBlockListSetOfPhoneNumbers())
     }
 
@@ -139,7 +127,7 @@ class StorageController {
         }
     }
 
-    private func recordedBlockListSetOfPhoneNumbers()-> [CXCallDirectoryPhoneNumber] {
+    private func recordedBlockListSetOfPhoneNumbers() -> [CXCallDirectoryPhoneNumber] {
         if let data = userDefaults.data(forKey: Constants.phoneNumbersAddedToBlockList) {
             let decoder = JSONDecoder()
             do {

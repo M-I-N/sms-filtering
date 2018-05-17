@@ -13,10 +13,16 @@ class FilterNumbersViewController: UIViewController {
 
     var stateController: StateController!
     private var dataSource: FilterNumbersTableViewDataSource!
+    
+    lazy var numberListItemDeletionClosure: ((String) -> Void) = { [weak self] number in
+        // delete from state controller
+        self?.stateController.delete(number: number)
+        self?.tableView.reloadData()
+    }
 
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        dataSource = FilterNumbersTableViewDataSource(numbers: stateController.numbers)
+        dataSource = FilterNumbersTableViewDataSource(numbers: stateController.numbers, itemDeletionObserver: numberListItemDeletionClosure)
         tableView.dataSource = dataSource
         tableView.reloadData()
     }

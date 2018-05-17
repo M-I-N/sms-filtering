@@ -9,9 +9,11 @@
 import UIKit
 
 class FilterNumbersTableViewDataSource: NSObject {
-    let numbers: [String]
-    init(numbers: [String]) {
+    private(set) var numbers: [String]
+    let itemDeletionObserver: ((String) -> Void)?
+    init(numbers: [String], itemDeletionObserver: ((String) -> Void)? = nil) {
         self.numbers = numbers
+        self.itemDeletionObserver = itemDeletionObserver
     }
 }
 
@@ -28,5 +30,20 @@ extension FilterNumbersTableViewDataSource: UITableViewDataSource {
         let number = numbers[indexPath.row]
         cell.viewModel = FilterNumbersTableViewCell.ViewModel(number: number)
         return cell
+    }
+    func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
+        return true
+    }
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
+        if editingStyle == .delete {
+            // Find the item that needs to be deleted
+            let number = numbers[indexPath.row]
+            if let numberIndexToDelete = numbers.index(of: number) {
+                // First delete it from the local array
+                numbers.remove(at: numberIndexToDelete)
+                // This item needs to be deleted from the application state, through StorageController
+                itemDeletionObserver?(number)
+            }
+        }
     }
 }

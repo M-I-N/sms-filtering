@@ -13,10 +13,16 @@ class FilterWordsViewController: UIViewController {
 
     var stateController: StateController!
     private var dataSource: FilterWordsTableViewDataSource!
+    
+    lazy var wordListItemDeletionClosure: ((String) -> Void) = { [weak self] word in
+        // delete from state controller
+        self?.stateController.delete(word: word)
+        self?.tableView.reloadData()
+    }
 
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        dataSource = FilterWordsTableViewDataSource(words: stateController.words)
+        dataSource = FilterWordsTableViewDataSource(words: stateController.words, itemDeletionObserver: wordListItemDeletionClosure)
         tableView.dataSource = dataSource
         tableView.reloadData()
     }

@@ -9,9 +9,11 @@
 import UIKit
 
 class FilterWordsTableViewDataSource: NSObject {
-    let words: [String]
-    init(words: [String]) {
+    private(set) var words: [String]
+    let itemDeletionObserver: ((String) -> Void)?
+    init(words: [String], itemDeletionObserver: ((String) -> Void)? = nil) {
         self.words = words
+        self.itemDeletionObserver = itemDeletionObserver
     }
 }
 
@@ -28,5 +30,17 @@ extension FilterWordsTableViewDataSource: UITableViewDataSource {
         let word = words[indexPath.row]
         cell.viewModel = FilterWordsTableViewCell.ViewModel(word: word)
         return cell
+    }
+    func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
+        return true
+    }
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
+        if editingStyle == .delete {
+            let word = words[indexPath.row]
+            if let wordIndexToDelete = words.index(of: word) {
+                words.remove(at: wordIndexToDelete)
+                itemDeletionObserver?(word)
+            }
+        }
     }
 }

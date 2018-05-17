@@ -27,8 +27,8 @@ class StateController {
         callBlocks = storageController.fetchCallBlocks()
     }
 
-    private func addDefaultFilter()-> WordFilter {
-        let filter = WordFilter(words: ["offer", "register", "subscribe"])
+    private func addDefaultFilter() -> WordFilter {
+        let filter = WordFilter(words: [ "offer", "register", "subscribe" ])
         storageController.save(wordFilter: filter)
         return filter
     }
@@ -41,6 +41,12 @@ class StateController {
             storageController.save(wordFilter: filter)
         }
     }
+    
+    func delete(word: String) {
+        words = words.filter { $0 != word }
+        let filter = WordFilter(words: words)
+        storageController.save(wordFilter: filter)
+    }
 
     func add(number: String) {
         if !number.isEmpty {
@@ -50,6 +56,12 @@ class StateController {
             let filter = NumberFilter(numbers: numbers)
             storageController.save(numberFilter: filter)
         }
+    }
+    
+    func delete(number: String) {
+        numbers = numbers.filter { $0 != number }
+        let filter = NumberFilter(numbers: numbers)
+        storageController.save(numberFilter: filter)
     }
 
     func add(callBlock: CallBlock) {

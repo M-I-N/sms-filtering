@@ -30,6 +30,8 @@ let numbersAfterRemoving = numbersByAddingNew.filter { return !remove.contains($
 let phoneNumber: CXCallDirectoryPhoneNumber = CXCallDirectoryPhoneNumber("+8801684505025")!
 print(phoneNumber)
 
-let numbersToFilter = [ "+88 01717 011 014", "+880 168 450 5025" ].map { $0.trimmingCharacters(in: .whitespaces) }
-let messageSender = "+8801717011014"
-let shouldFilter = numbersToFilter.contains(where: messageSender.contains)
+let numbersToFilter = [ "+818033101388", "+880 168 450 5025" ].map { $0.trimmingCharacters(in: .whitespaces) }
+let messageSender = "+818033101388"
+let shouldFilter = numbersToFilter.contains(messageSender)
+//"+880 1768-835619".replacingOccurrences(of: "+", with: "").replacingOccurrences(of: " ", with: "").replacingOccurrences(of: "-", with: "")
+

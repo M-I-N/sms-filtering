@@ -73,7 +73,7 @@ extension MessageFilterExtension: ILMessageFilterQueryHandling {
 //        print(messageSender)
 //        print(messageBody)
 //        print(wordsToFiler)
-        return wordsToFiler.map { $0.lowercased() }.contains(where: messageBody.lowercased().contains) || numbersToFilter.contains(where: messageSender.contains) ? .filter : .none
+        return wordsToFiler.map { $0.lowercased() }.contains(where: messageBody.lowercased().contains) || numbersToFilter.contains(messageSender) ? .filter : .none
     }
     
     private func action(for networkResponse: ILNetworkResponse) -> ILMessageFilterAction {

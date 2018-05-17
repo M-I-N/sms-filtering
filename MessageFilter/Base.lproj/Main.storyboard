@@ -189,7 +189,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Type a phone number" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="8C9-JD-OUZ">
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Type a phone number" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="8C9-JD-OUZ" customClass="CTKFlagPhoneNumberTextField" customModule="CTKFlagPhoneNumber">
                                 <rect key="frame" x="20" y="84" width="335" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -217,7 +217,7 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <outlet property="phoneNumberTextField" destination="8C9-JD-OUZ" id="Urw-jV-Cb5"/>
+                        <outlet property="phoneNumberTextField" destination="8C9-JD-OUZ" id="aRX-OV-1Ro"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="td2-DY-gon" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -305,11 +305,11 @@
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Type Phone Number" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="4Pw-wj-ibk">
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="mzV-JQ-5CV" customClass="CTKFlagPhoneNumberTextField" customModule="CTKFlagPhoneNumber">
                                         <rect key="frame" x="0.0" y="38" width="335" height="30"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits" keyboardType="phonePad" textContentType="tel"/>
+                                        <textInputTraits key="textInputTraits"/>
                                     </textField>
                                 </subviews>
                             </stackView>
@@ -336,7 +336,7 @@
                     </navigationItem>
                     <connections>
                         <outlet property="nameTextField" destination="VoK-Y8-mpc" id="u5l-fa-V0V"/>
-                        <outlet property="phoneNumberTextField" destination="4Pw-wj-ibk" id="6ZZ-hz-J6s"/>
+                        <outlet property="phoneNumberTextField" destination="mzV-JQ-5CV" id="R7c-1x-g2T"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OYc-Rw-OQB" userLabel="First Responder" sceneMemberID="firstResponder"/>

@@ -7,18 +7,26 @@
 //
 
 import UIKit
+import CTKFlagPhoneNumber
 
 class AddNumberViewController: UIViewController {
-    @IBOutlet private weak var phoneNumberTextField: UITextField!
+    @IBOutlet private weak var phoneNumberTextField: CTKFlagPhoneNumberTextField!
 
     var stateController: StateController!
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        setupCountryCodeTextField()
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
+    }
+
+    private func setupCountryCodeTextField() {
+        phoneNumberTextField.parentViewController = self
+//        phoneNumberTextField.flagSize = CGSize(width: 20, height: 20)
+//        phoneNumberTextField.setFlag(with: "BD")
     }
 
     // MARK: - Navigation
@@ -28,9 +36,11 @@ class AddNumberViewController: UIViewController {
         guard segue.identifier == "SaveNumberSegue" else {
             return
         }
-        let number = phoneNumberTextField.text ?? ""
+        let number = phoneNumberTextField.getPhoneNumber()
         // save this word to storage using state controller
-        stateController.add(number: number)
+        if let number = number {
+            stateController.add(number: number)
+        }
     }
 
 }

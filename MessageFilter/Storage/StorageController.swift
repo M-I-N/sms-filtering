@@ -33,7 +33,7 @@ class StorageController {
                 return nil
             }
         } else {
-            print("No initial words for filtering exists")
+            print("No initial filtering word exists")
             return nil
         }
     }
@@ -59,7 +59,7 @@ class StorageController {
                 return nil
             }
         } else {
-            print("No initial numbers for filtering exists")
+            print("No initial filtering number exists")
             return nil
         }
     }
@@ -85,7 +85,7 @@ class StorageController {
                 return []
             }
         } else {
-            print("No initial words for filtering exists")
+            print("No initial call blocking number exists")
             return []
         }
     }

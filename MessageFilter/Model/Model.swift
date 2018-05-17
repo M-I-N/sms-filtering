@@ -19,9 +19,13 @@ struct NumberFilter: Codable {
 
 struct CallBlock: Codable {
     let name: String
-    let phoneNumber: String
+    let phoneNumber: String /* "+880 1768-835619" */
     init(name: String = "Unknown", phoneNumber: String) {
         self.name = name
         self.phoneNumber = phoneNumber
+    }
+    var validPhoneNumber: String {
+        let newPhoneNumber = phoneNumber.replacingOccurrences(of: "+", with: "").replacingOccurrences(of: " ", with: "").replacingOccurrences(of: "-", with: "")
+        return newPhoneNumber
     }
 }

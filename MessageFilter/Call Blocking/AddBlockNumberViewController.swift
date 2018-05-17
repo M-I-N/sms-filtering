@@ -11,8 +11,8 @@ import CallKit
 import CTKFlagPhoneNumber
 
 class AddBlockNumberViewController: UIViewController {
-    @IBOutlet weak var nameTextField: UITextField!
-    @IBOutlet weak var phoneNumberTextField: CTKFlagPhoneNumberTextField!
+    @IBOutlet private weak var nameTextField: UITextField!
+    @IBOutlet private weak var phoneNumberTextField: CTKFlagPhoneNumberTextField!
 
     var stateController: StateController!
 
@@ -27,10 +27,8 @@ class AddBlockNumberViewController: UIViewController {
     }
     
 
-    func setupCountryCodeTextField() {
+    private func setupCountryCodeTextField() {
         phoneNumberTextField.parentViewController = self
-//        phoneNumberTextField.flagSize = CGSize(width: 20, height: 20)
-//        phoneNumberTextField.setFlag(with: "BD")
     }
 
     // MARK: - Navigation
@@ -41,22 +39,7 @@ class AddBlockNumberViewController: UIViewController {
             return
         }
         let name = nameTextField.text ?? ""
-        let phoneNumber = phoneNumberTextField.getPhoneNumber()
-        /*do {
-            let validPhoneNumber = try phoneNumberKit.parse(phoneNumber)
-            let validPhoneNumberString = phoneNumberKit.format(validPhoneNumber, toType: .international)
-            if !validPhoneNumberString.isEmpty {
-                var callBlock: CallBlock
-                if name.isEmpty {
-                    callBlock = CallBlock(phoneNumber: validPhoneNumberString)
-                } else {
-                    callBlock = CallBlock(name: name, phoneNumber: validPhoneNumberString)
-                }
-                stateController.add(callBlock: callBlock)
-            }
-        } catch {
-            print(error.localizedDescription)
-        }*/
+        let phoneNumber = phoneNumberTextField.getFormattedPhoneNumber()
         if let phoneNumber = phoneNumber {
             var callBlock: CallBlock
             if name.isEmpty {

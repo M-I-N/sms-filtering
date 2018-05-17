@@ -56,4 +56,9 @@ class StateController {
         callBlocks.append(callBlock)
         storageController.save(callBlocks: callBlocks)
     }
+    
+    func delete(callblock: CallBlock) {
+        callBlocks = callBlocks.filter { $0 != callblock }
+        storageController.save(callBlocks: callBlocks)
+    }
 }

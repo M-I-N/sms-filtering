@@ -10,14 +10,14 @@ import UIKit
 import CallKit
 
 class BlockedListTableViewController: UIViewController {
-    @IBOutlet weak var tableView: UITableView!
+    @IBOutlet private weak var tableView: UITableView!
 
     var stateController: StateController!
     private var dataSource: BlockedListTableViewDataSource!
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        CXCallDirectoryManager.sharedInstance.getEnabledStatusForExtension(withIdentifier: "com.bjitgroup.TalkMondo.CallKit") { [weak self] (status, error) in
+        CXCallDirectoryManager.sharedInstance.getEnabledStatusForExtension(withIdentifier: "com.bjitgroup.MessageFilter.CallDirectoryExtension") { [weak self] (status, error) in
             if let error = error {
                 print(error.localizedDescription)
             } else {
@@ -30,14 +30,20 @@ class BlockedListTableViewController: UIViewController {
             }
         }
     }
+    
+    lazy var blockedListItemDeletionClosure: ((CallBlock) -> Void) = { [weak self] callBlock in
+        // delete from state controller
+        self?.stateController.delete(callblock: callBlock)
+        self?.tableView.reloadData()
+    }
 
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        dataSource = BlockedListTableViewDataSource(callBlocks: stateController.callBlocks)
+        dataSource = BlockedListTableViewDataSource(callBlocks: stateController.callBlocks, itemDeletionObserver: blockedListItemDeletionClosure)
         tableView.dataSource = dataSource
         tableView.reloadData()
 
-        CXCallDirectoryManager.sharedInstance.getEnabledStatusForExtension(withIdentifier: "com.bjitgroup.TalkMondo.CallKit") { [weak self] (status, error) in
+        CXCallDirectoryManager.sharedInstance.getEnabledStatusForExtension(withIdentifier: "com.bjitgroup.MessageFilter.CallDirectoryExtension") { [weak self] (status, error) in
             if let error = error {
                 print(error.localizedDescription)
             } else {

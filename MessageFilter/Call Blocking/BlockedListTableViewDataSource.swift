@@ -9,9 +9,11 @@
 import UIKit
 
 class BlockedListTableViewDataSource: NSObject {
-    let callBlocks: [CallBlock]
-    init(callBlocks: [CallBlock]) {
+    private(set) var callBlocks: [CallBlock]
+    let itemDeletionObserver: ((CallBlock) -> Void)?
+    init(callBlocks: [CallBlock], itemDeletionObserver: ((CallBlock) -> Void)? = nil) {
         self.callBlocks = callBlocks
+        self.itemDeletionObserver = itemDeletionObserver
     }
 }
 
@@ -28,5 +30,20 @@ extension BlockedListTableViewDataSource: UITableViewDataSource {
         let callBlock = callBlocks[indexPath.row]
         cell.viewModel = BlockedListTableViewCell.ViewModel(callBlock: callBlock)
         return cell
+    }
+    func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
+        return true
+    }
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
+        if editingStyle == .delete {
+            // Find the item that needs to be deleted
+            let callBlock = callBlocks[indexPath.row]
+            if let callBlockIndexToDelete = callBlocks.index(of: callBlock) {
+                // First delete it from the local array
+                callBlocks.remove(at: callBlockIndexToDelete)
+                // This item needs to be deleted from the application state, through StorageController
+                itemDeletionObserver?(callBlock)
+            }
+        }
     }
 }

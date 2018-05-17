@@ -25,8 +25,6 @@ class AddNumberViewController: UIViewController {
 
     private func setupCountryCodeTextField() {
         phoneNumberTextField.parentViewController = self
-//        phoneNumberTextField.flagSize = CGSize(width: 20, height: 20)
-//        phoneNumberTextField.setFlag(with: "BD")
     }
 
     // MARK: - Navigation
@@ -36,7 +34,7 @@ class AddNumberViewController: UIViewController {
         guard segue.identifier == "SaveNumberSegue" else {
             return
         }
-        let number = phoneNumberTextField.getPhoneNumber()
+        let number = phoneNumberTextField.getFormattedPhoneNumber()
         // save this word to storage using state controller
         if let number = number {
             stateController.add(number: number)

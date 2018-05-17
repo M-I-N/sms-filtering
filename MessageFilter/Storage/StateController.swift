@@ -11,6 +11,7 @@ import Foundation
 class StateController {
     private(set) var words = [String]()
     private(set) var numbers = [String]()
+    private(set) var callBlocks = [CallBlock]()
     private let storageController: StorageController
     init(storageController: StorageController) {
         self.storageController = storageController
@@ -23,6 +24,7 @@ class StateController {
         if let numberFilter = storageController.fetchNumberFilter() {
             numbers = numberFilter.numbers
         }
+        callBlocks = storageController.fetchCallBlocks()
     }
 
     private func addDefaultFilter()-> WordFilter {
@@ -48,5 +50,10 @@ class StateController {
             let filter = NumberFilter(numbers: numbers)
             storageController.save(numberFilter: filter)
         }
+    }
+
+    func add(callBlock: CallBlock) {
+        callBlocks.append(callBlock)
+        storageController.save(callBlocks: callBlocks)
     }
 }

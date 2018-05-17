@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import CallKit
 
 struct WordFilter: Codable {
     let words: [String]
@@ -14,4 +15,13 @@ struct WordFilter: Codable {
 
 struct NumberFilter: Codable {
     let numbers: [String]
+}
+
+struct CallBlock: Codable {
+    let name: String
+    let phoneNumber: CXCallDirectoryPhoneNumber
+    init(name: String = "Unknown", phoneNumber: CXCallDirectoryPhoneNumber) {
+        self.name = name
+        self.phoneNumber = phoneNumber
+    }
 }

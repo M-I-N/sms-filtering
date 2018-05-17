@@ -17,7 +17,7 @@ class BlockedListTableViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        CXCallDirectoryManager.sharedInstance.getEnabledStatusForExtension(withIdentifier: "com.bjitgroup.MessageFilter.CallDirectoryExtension") { [weak self] (status, error) in
+        CXCallDirectoryManager.sharedInstance.getEnabledStatusForExtension(withIdentifier: Constants.callDirectoryExtensionIdentifier) { [weak self] (status, error) in
             if let error = error {
                 print(error.localizedDescription)
             } else {
@@ -35,6 +35,7 @@ class BlockedListTableViewController: UIViewController {
         // delete from state controller
         self?.stateController.delete(callblock: callBlock)
         self?.tableView.reloadData()
+        self?.reloadCallDirectoryExtension()
     }
 
     override func viewWillAppear(_ animated: Bool) {
@@ -43,7 +44,7 @@ class BlockedListTableViewController: UIViewController {
         tableView.dataSource = dataSource
         tableView.reloadData()
 
-        CXCallDirectoryManager.sharedInstance.getEnabledStatusForExtension(withIdentifier: "com.bjitgroup.MessageFilter.CallDirectoryExtension") { [weak self] (status, error) in
+        CXCallDirectoryManager.sharedInstance.getEnabledStatusForExtension(withIdentifier: Constants.callDirectoryExtensionIdentifier) { [weak self] (status, error) in
             if let error = error {
                 print(error.localizedDescription)
             } else {
@@ -89,7 +90,7 @@ class BlockedListTableViewController: UIViewController {
     }
 
     private func reloadCallDirectoryExtension() {
-        CXCallDirectoryManager.sharedInstance.reloadExtension(withIdentifier: "com.bjitgroup.TalkMondo.CallKit") { (error) in
+        CXCallDirectoryManager.sharedInstance.reloadExtension(withIdentifier: Constants.callDirectoryExtensionIdentifier) { (error) in
             if let error = error {
                 print(error.localizedDescription)
             }
